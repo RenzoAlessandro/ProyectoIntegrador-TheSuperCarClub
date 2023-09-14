@@ -1,0 +1,239 @@
+/*============================================================
+======================== BANNER SECTION ======================
+=============================================================*/
+.main-banner {
+    height: 370px;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-img {
+    height: 370px;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.banner-info {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+    color: var(--text-color-white);
+    
+    /* top: 10px; */
+    bottom: 10px;
+    right: 10px;
+    /* left: 10px; */
+    width: auto;
+    font-size: 32px;
+    padding: 1rem 3rem;
+    text-align: end;
+}
+
+.banner-title {
+    position: relative;
+}
+
+.banner-title::before{
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 60px;
+    border-radius: 4px;
+    background-color: red;
+    transform: translateX(-20px) translateY(18px);
+}
+/*============================================================
+======================= BANNER SECTION END ===================
+=============================================================*/
+
+
+/*============================================================
+======================== FEACTURE SECTION ====================
+=============================================================*/
+.features-list {
+    width: 100%;
+    margin: 2rem 0;
+}
+.list-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    list-style: none;
+
+    & li {
+        display: flex;
+        gap: 1rem;
+        flex: 1 1 0%;
+        align-items: center;
+
+
+        & i {
+            color: var(--text-color);
+            font-size: 50px;
+        }
+    }
+
+    .list-content {
+        & h4 {
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        & p {
+            font-size: medium;
+        }
+    }
+}
+/*============================================================
+====================== FEACTURE SECTION END ==================
+=============================================================*/
+
+
+/*============================================================
+====================== SLIDER BRANDS SECTION =================
+=============================================================*/
+.slider-brands-container {
+    display: flex;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+}
+
+.slider-brands-container::before {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    content: "";
+    width: 10%;
+    height: 150px;
+    background: var(--body-bg-color);
+}
+
+.slider-brands-container::after {
+    position: absolute;
+    right: 0;
+    content: "";
+    width: 10%;
+    height: 150px;
+    background: var(--body-bg-color);
+}
+
+.slider-brands-container .slide-track {
+    display: flex;
+    animation: scroll 35s linear infinite;
+    -webkit-animation: scroll 35s linear infinite;
+    width: calc(250px * 14);
+}
+
+.slider-brands-container .slide-brand {
+    display: flex;
+}
+
+.slider-brands-container .slide-brand {
+    width: 210px;
+    height: 120px;
+    padding: 10px;
+    background-color: white;
+    pointer-events: none;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.slider-brands-container .slide-brand img {
+    margin: 0 auto;
+    filter: grayscale(100%) opacity(35%);
+}
+
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-270px * 7));
+        transform: translateX(calc(-270px * 7));
+    }
+}
+/*============================================================
+================== SLIDER BRANDS SECTION END =================
+=============================================================*/
+
+
+/*============================================================
+======================= FEATURES SECTION =====================
+=============================================================*/
+.features-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0;
+    background-color: var(--features-bg-color-1);
+    color: #1a4651;
+
+    .feature:nth-child(even) {
+        background-color: var(--features-bg-color-2);
+    }
+}
+
+.features-section .feature {
+    padding: 3rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    .fa-solid {
+        font-size: 3rem;
+        margin-bottom: .5rem;
+    }
+}
+/*============================================================
+===================== FEATURES SECTION END ===================
+=============================================================*/
+
+
+/*============================================================
+========================= RESPONSIVE =========================
+=============================================================*/
+@media screen and (width > 1200px) {
+
+    /*================== BANNER SECTION ====================*/
+
+    .main-banner {
+        height: 670px;
+    }
+    
+    .banner-img {
+        height: 670px;
+    }
+
+    /*================== FEACTURE SECTION ==================*/
+    .list-view {
+        flex-direction: row;
+    }
+    /*================ FEACTURE SECTION END ================*/
+
+
+    /*================= BANNER SECTION END =================*/
+
+
+    /*====================== FEATURES ======================*/
+
+    .features-section {
+        flex-direction: row;
+    }
+    
+    .features-section .feature {
+        flex: 1 1 0%;
+        padding: 4rem 1rem;
+    }
+
+    /*==================== FEATURES END ====================*/
+
+}
+/*============================================================
+======================== RESPONSIVE END ======================
+=============================================================*/

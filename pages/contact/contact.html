@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperCar Club</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/ui-elements.css">
+  <link rel="stylesheet" href="/css/contact-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <header class="main-header">
+    <input class="input-check" type="checkbox" id="check-menu">
+
+    <label class="burger-menu" for="check-menu">
+      <div class="burger-line"></div>
+    </label>
+
+    <a class="logo-link" href="/index.html">
+      <picture>
+        <!-- <source class="banner-img" srcset="/assets/porsche-logo-1.png" media="(width > 1200px)"> -->
+        <img class="nav-logo" src="/assets/logo-TheSupercarClub.png" alt="logo-img">
+      </picture>
+    </a>
+
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html">inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/model-cars/model-cars.html">Modelos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/register/register.html">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/login/login.html">Iniciar sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="user-menu">
+
+      <button class="switch" id="switch">
+        <span>
+          <i class="fa-solid fa-sun"></i>
+        </span>
+        <span>
+          <i class="fa-solid fa-moon"></i>
+        </span>
+      </button>
+
+      <a class="find-link" href="#" title='Buscar modelo'>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+      <a class="info-link" href="#" title='información'>
+        <i class="fa-solid fa-circle-info"></i>
+      </a>
+      <a class="shopping-link" href="#" title='Autos rentados'>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+      <a class="user-link" href="#" title='Mi perfil'>
+        <div class="username-link">User Name</div>
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </div>
+
+  </header>
+
+  <main class="main-container main-contact">
+
+    <div class="section-contact">
+      <div class="contact-form-container">
+        <div class="contact-wrapper">
+          <h1 class="title-form contact-title">Contáctenos</h1>
+          <p class="message">¡A nuestro amigable equipo le encantaría saber de usted!</p>
+          <form class="form contact-form">
+
+            <div class="flex-row">
+              <div class="input-wrapper">
+                <label for="firstname">Nombres</label>
+                <input class="inputSimple" type="text" name="firstname" id="firstname" 
+                required 
+                minlength="5" 
+                maxlength="80">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="lastname">Apellidos</label>
+                <input class="inputSimple" type="text" name="lastname" id="lastname" 
+                required 
+                minlength="5" 
+                maxlength="80">
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="email">Correo Electrónico</label>
+              <input class="inputSimple" type="email" name="email" id="email" 
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required 
+              minlength="5" 
+              maxlength="80">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="phone">Número de Teléfono</label>
+              <input class="inputSimple" type="tel" name="phone" id="phone" 
+              pattern="[0-9]{9}$"
+              required 
+              minlength="5" 
+              maxlength="80">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="message">Mensaje</label>
+              <textarea class="textareaSimple" name="message" id="message" rows="4"
+              required
+              minlength="10" 
+              maxlength="400"
+              ></textarea>
+            </div>
+
+            <div class="input-wrapper">
+              <button class="buttonSimple" type="submit">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30619.274011201785!2d-71.56059390680174!3d-16.404028777964832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a58865afa1b%3A0x54d07baf51532203!2sArequipa!5e0!3m2!1ses-419!2spe!4v1694399507581!5m2!1ses-419!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+  </div>
+
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-company">
+      <section class="footer-section">
+        <a class="footer-logo-link" href="">
+          <img class="footer-logo" src="/assets/logo-TheSupercarClub.png" alt="logo-img">
+        </a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam nobis ea recusandae, repudiandae id quae
+          dignissimos, blanditiis dolore esse architecto rerum suscipit sapiente omnis ut vel ratione laudantium soluta
+          placeat quas. Porro perferendis totam, corporis expedita quaerat rerum earum nulla architecto, placeat quia
+          deleniti excepturi labore. Tenetur sint corporis, exercitationem sunt porro soluta error, adipisci deserunt,
+          in pariatur sed repellat!</p>
+        <div class="footer-icons">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </section>
+
+      <section class="footer-section">
+        <h4>Compañía</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="/index.html">Inicio</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="/pages/about-us/about-us.html">Acerca de</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Servicio</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="/pages/contact/contact.html">Contacto</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-section">
+        <h4>Recursos</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="#">Blog</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Galería</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Eventos</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Boletín</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-section">
+        <h4>Social</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="https://twitter.com/?lang=es" target="_blank">Twitter</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="https://www.instagram.com/" target="_blank">instagram</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="https://pe.linkedin.com/" target="_blank">Linkedin</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-section">
+        <h4>Legal</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="#">Términos</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Privacidad</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Cookies</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Licencias</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <small class="footer-copyright">
+      <i class="fa-regular fa-copyright"></i> My Company Ltd. <span id="year"></span>, Todos los derechos
+      reservados.</span>
+    </small>
+
+  </footer>
+
+
+  <div class="whatsapp-container">
+    <a href="https://crear.wa.link/" target="_blank">
+      <img class="whatsapp-img" src="/assets/WhatsApp-logo.png" alt="whatsapp logo" />
+    </a>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

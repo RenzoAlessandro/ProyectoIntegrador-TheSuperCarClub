@@ -1,0 +1,472 @@
+/*============================================================
+======================== CARDS SIMPLE ========================
+=============================================================*/
+.card-simple-container {
+    padding: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    overflow-x:auto;
+}
+
+.card-simple {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 220px;
+    width: 220px;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: var(--box-shadow-1);
+    transition: all 300ms ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: var(--box-shadow-2);
+
+        .card-simple-header {
+            .card-simple-img {
+                transform: scale(1.01);
+            }
+            
+        }
+    }
+
+    .card-simple-header {
+        overflow: hidden;
+        
+        .card-simple-img {
+            width: 70%;
+            height: auto;
+            display: block;
+            margin: auto;
+            object-fit: cover;
+            pointer-events: none;
+            transition: all 600ms ease;
+        }
+    }
+
+    .card-simple-body {
+        text-align: center;
+        .card-simple-title {
+            font-weight: 300;
+            color: black;
+        }
+    }
+}
+/*============================================================
+====================== CARDS SIMPLE END ======================
+=============================================================*/
+
+
+/*============================================================
+======================== CAR 1 SECTION =======================
+=============================================================*/
+.card-cars-first-container {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: .75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-cars-first {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 260px;
+    /* max-width: 480px; */
+    border-radius: 16px;
+    background: var(--card-color);
+    box-shadow: var(--box-shadow-1);
+    cursor: pointer;
+    transition: all 300ms ease;
+
+    &:hover {
+        box-shadow: var(--box-shadow-2);
+        transform: scale(1.02);
+    }
+}
+
+.card-first-header {
+    position: relative;
+    /* width: 480px; */
+    height: 240px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .card-first-img {
+        height: 240px;
+        width: auto;
+        object-fit: cover;
+        pointer-events: none;
+        transform: translateY(40px);
+    }
+    .card-first-info {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+
+        .card-first-logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .card-first-make, 
+        .card-first-model {
+            width: 100%;
+            overflow: hidden;
+            color: var(--text-color);
+        }
+    }
+}
+.card-first-body {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .6rem 1rem;
+
+    .card-first-features {
+        display: flex;
+        flex-direction: row;
+        gap: .6rem;
+
+        .card-first-seats,
+        .card-first-transmission,
+        .card-first-fuel,
+        .card-first-type {
+            display: flex;
+            flex-direction: row;
+            gap: .2rem;
+            align-items: center;
+            font-size: smaller;
+            font-weight: 300;
+            color: #858585;
+        }
+    }
+    .card-first-price {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: var(--text-color);
+
+        .text-price {
+            font-size: 15px;
+        }
+    }
+}
+
+.card-first-body::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #dadada;
+}
+/*============================================================
+========================== CAR 1 END =========================
+=============================================================*/
+
+
+/*============================================================
+============================ CAR 2 ===========================
+=============================================================*/
+.card-cars-second-container {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: .75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-cars-second {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 520px;
+    background: var(--card-color);
+    border-radius: 16px;
+    box-shadow: var(--box-shadow-1);
+    transition: all 300ms ease;
+
+    &:hover {
+        box-shadow: var(--box-shadow-2);
+        transform: scale(1.02);
+    }
+}
+
+.card-cars-second-header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+    .card-second-img {
+        height: 240px;
+        width: auto;
+        pointer-events: none;
+        transform: translateY(40px);
+    }
+    .card-second-info {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: .5rem;
+
+        .card-second-logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .card-second-make, 
+        .card-second-model {
+            width: 100%;
+            overflow: hidden;
+            color: var(--text-color)
+        }
+    }
+}
+
+.card-second-body {
+    flex-grow: 1;
+    padding: 1rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    .card-second-features {
+        display: flex;
+        flex-direction: row;
+        gap: .6rem;
+        margin: .2rem 0;
+
+        .card-tag {
+            display: flex;
+            flex-direction: row;
+            gap: .2rem;
+            align-items: center;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-weight: 300;
+            color: #ffffff;
+            background-color: black;
+        }
+
+        .card-second-seats {
+            color: #f2f2f2;
+            background-color: var(--seats-color);
+        }
+        .card-second-transmission {
+            color: #f2f2f2;
+            background-color: var(--transmission-color);
+        }
+        .card-second-fuel {
+            color: #f2f2f2;
+            background-color: var(--fuel-color);
+        }
+        .card-second-type {
+            color: #f2f2f2;
+            background-color: var(--type-color);
+        }
+    }
+    .card-second-description {
+        flex-grow: 1;
+        margin: .2rem 0;
+        color: var(--text-color);
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .card-second-values {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .card-second-date {
+            color: #858585;
+            font-size: small;
+        }
+        .card-second-price {
+            display: flex;
+            .text-second-price {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.card-second-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px 8px;
+
+    .card-second-btn {
+        padding: 12px 24px;
+        font-size: 12px;
+        color: white;
+        text-decoration: none;
+        border: none;
+        font-weight: 500;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #151717;
+        font-family: var(--body-font);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+}
+/*============================================================
+========================== CAR 2 END =========================
+=============================================================*/
+
+
+/*============================================================
+========================= CAR CLIENTS ========================
+=============================================================*/
+.card-testimonial-container {
+    padding: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+}
+
+.card-testimonial {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+    width: 450px;
+    height: 250px;
+    padding: 2rem 2rem;
+    border-radius: 16px;
+    background: var(--card-color);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+
+    .card-testimonial-header {
+        text-align: center;
+        .card-testimonial-review {
+            color: var(--text-color);
+            font-size: 18px;
+        }
+    }
+    .card-testimonial-footer {
+        display: flex;
+        justify-content: space-around;
+
+        .card-testimonial-date {
+            color: #858585;
+            font-size: small;
+        }
+    }
+}
+/*============================================================
+======================= CAR CLIENTS END ======================
+=============================================================*/
+
+/*============================================================
+========================= CAR PROFILE ========================
+=============================================================*/
+.card-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-profile {
+    background-color: var(--card-color);
+    width: 325px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-profile-header {
+    width: 100%;
+    display: block;
+    pointer-events: none;
+}
+
+.card-profile-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.card-profile-body-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-top: -53px;
+    pointer-events: none;
+    background-color: var(--card-color);
+    border: 5px solid var(--card-color);
+}
+
+.card-profile-body-title {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.card-profile-body-title span {
+    color: hsl(0, 0%, 59%);
+    font-weight: 400;
+    margin-left: 0.2rem;
+}
+
+.card-profile-body-text {
+    color: hsl(0, 0%, 59%);
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.card-profile-footer {
+    display: flex;
+    justify-content: space-around;
+}
+.card-profile-footer-social {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+.card-profile-footer-social p {
+    letter-spacing: 1px;
+    color: hsl(0, 0%, 59%);
+}
+/*============================================================
+======================= CAR PROFILE END ======================
+=============================================================*/

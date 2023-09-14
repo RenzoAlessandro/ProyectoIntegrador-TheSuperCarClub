@@ -1,0 +1,68 @@
+.info-business-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img-container {
+        width: 100dvw;
+        height: 100%;
+        overflow: hidden;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    .info-container {
+        width: 100dvw;
+        padding: 1rem 4rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        color: var(--text-color);
+
+        .vision-mision-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+
+            .vision-container,
+            .mision-container {
+                padding: 10px 15px;
+                border-radius: 10px;
+                background-color: var(--card-color);
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+            }
+        }
+    }
+}
+
+/*============================================================
+========================== RESPONSIVE ========================
+=============================================================*/
+@media screen and (width > 1200px) { 
+    .info-business-container {
+        flex-direction: row;
+
+        .img-container {
+            width: 50dvw;
+        }
+
+        .info-container {
+            width: 50dvw;
+
+            .vision-mision-container {
+                flex-direction: row;
+                gap: 1rem;
+
+                .vision-mision-container {
+                    flex-direction: row;
+    
+                }
+            }
+        }
+    }
+
+
+}

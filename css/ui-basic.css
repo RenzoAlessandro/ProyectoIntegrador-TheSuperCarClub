@@ -1,0 +1,31 @@
+margin-t-3 {
+    margin-top: 3rem;
+}
+
+margin-b-3 {
+    margin-bottom: 3rem;
+}
+
+margin-y-3 {
+    margin: 3rem 0;
+}
+
+margin-x-3 {
+    margin: 0 3rem;
+}
+
+padding-t-3{
+    padding-top: 3rem;
+}
+
+padding-b-3{
+    padding-bottom: 3rem;
+}
+
+padding-y-3{
+    padding: 3rem 0;
+}
+
+padding-x-3{
+    padding: 0 3rem;
+}

@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperCar Club</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/ui-elements.css">
+  <link rel="stylesheet" href="/css/ui-sections.css">
+  <link rel="stylesheet" href="/css/ui-cards.css">
+  <link rel="stylesheet" href="/css/ui-basic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <header class="main-header">
+    <input class="input-check" type="checkbox" id="check-menu">
+
+    <label class="burger-menu" for="check-menu">
+      <div class="burger-line"></div>
+    </label>
+
+    <a class="logo-link" href="/index.html">
+      <picture>
+        <!-- <source class="banner-img" srcset="/assets/porsche-logo-1.png" media="(width > 1200px)"> -->
+        <img class="nav-logo" src="/assets/logo-TheSupercarClub.png" alt="logo-img">
+      </picture>
+    </a>
+
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html">inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/model-cars/model-cars.html">Modelos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/register/register.html">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/login/login.html">Iniciar sesión</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="user-menu">
+
+      <button class="switch" id="switch">
+        <span>
+          <i class="fa-solid fa-sun"></i>
+        </span>
+        <span>
+          <i class="fa-solid fa-moon"></i>
+        </span>
+      </button>
+
+      <a class="find-link" href="#" title='Buscar modelo'>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+      <a class="info-link" href="#" title='información'>
+        <i class="fa-solid fa-circle-info"></i>
+      </a>
+      <a class="shopping-link" href="#" title='Autos rentados'>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+      <a class="user-link" href="#" title='Mi perfil'>
+        <div class="username-link">User Name</div>
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </div>
+
+  </header>
+
+  <div class="main-banner">
+    <figure class="banner-img-container">
+      <picture>
+        <source class="banner-img" srcset="/assets/Banner/porsche-normal-1.webp" media="(width > 1200px)">
+        <img class="banner-img" src="/assets/Banner/porsche-normal-2.webp" alt="Banner main image">
+      </picture>
+    </figure>
+    <div class="banner-info">
+      <h1 class="banner-title">
+        Taycan.
+      </h1>
+      <p class="banner-text">
+        Vehículos de lujo a tu alcance
+      </p>
+    </div>
+  </div>
+
+  <main class="main-container main-max-width">
+
+    <div class="section-container">
+      <div class="section-heading">
+        <h2 class="section-heading-title">The SuperCar Club</h2>
+      </div>
+      <div class="features-list">
+        <ul class="list-view">
+          <li>
+            <i class="fa-regular fa-circle-check"></i>
+            <div class="list-content">
+              <h4>Comodidad</h4>
+              <p>Sin largas colas. Le entregamos el automóvil en el aeropuerto, domicilio, hotel o lo recogemos en
+                nuestra ubicación de Beverly Hills.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-regular fa-star"></i>
+            <div class="list-content">
+              <h4>Calidad</h4>
+              <p>Una amplia variedad de coches exóticos y de lujo de última generación, siempre muy limpios y en las
+                mejores condiciones.</p>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="list-content">
+              <h4>Transparencia</h4>
+              <p>Si aparece en online, no paga por ello. Sin tarifas ocultas, transparente y listo para funcionar.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="custom-container">
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="section-heading">
+        <h2 class="section-heading-title">Conduce ahora</h2>
+        <h5 class="section-heading-subtitle">Disponible para recogida y entrega ahora</h5>
+      </div>
+
+      <section class="card-cars-first-container">
+        <article class="card-cars-first">
+          <header class="card-first-header">
+            <div class="card-first-info">
+              <img class="card-first-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-first-name">
+                <h2 class="card-first-make">Porsche</h2>
+                <p class="card-first-model">718 Boxster GTS 4.0</p>
+              </div>
+            </div>
+            <img class="card-first-img" src="/assets/Cars/Porsche/porsche-718-cayman-boxster-gts-4.webp"
+              alt="911 Carrera">
+          </header>
+          <div class="card-first-body">
+            <div class="card-first-features">
+              <div class="card-first-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-first-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-first-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-first-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <div class="card-first-price">
+              <i class="text-price fa-solid fa-dollar-sign">950</i>
+              <p>/día</p>
+            </div>
+          </div>
+        </article>
+        <article class="card-cars-first">
+          <header class="card-first-header">
+            <div class="card-first-info">
+              <img class="card-first-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-first-name">
+                <h2 class="card-first-make">Porsche</h2>
+                <p class="card-first-model">718 Boxster Style Edition</p>
+              </div>
+            </div>
+            <img class="card-first-img" src="/assets/Cars/Porsche/porsche-718-cayman-boxster-style-edition.webp"
+              alt="911 Carrera">
+          </header>
+          <div class="card-first-body">
+            <div class="card-first-features">
+              <div class="card-first-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-first-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-first-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-first-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <div class="card-first-price">
+              <i class="text-price fa-solid fa-dollar-sign">950</i>
+              <p>/día</p>
+            </div>
+          </div>
+        </article>
+        <article class="card-cars-first">
+          <header class="card-first-header">
+            <div class="card-first-info">
+              <img class="card-first-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-first-name">
+                <h2 class="card-first-make">Porsche</h2>
+                <p class="card-first-model">718 GT4 RS</p>
+              </div>
+            </div>
+            <img class="card-first-img" src="/assets/Cars/Porsche/porsche-718-cayman-gt4-rs.webp" alt="911 Carrera">
+          </header>
+          <div class="card-first-body">
+            <div class="card-first-features">
+              <div class="card-first-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-first-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-first-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-first-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <div class="card-first-price">
+              <i class="text-price fa-solid fa-dollar-sign">950</i>
+              <p>/día</p>
+            </div>
+          </div>
+        </article>
+        <article class="card-cars-first">
+          <header class="card-first-header">
+            <div class="card-first-info">
+              <img class="card-first-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-first-name">
+                <h2 class="card-first-make">Porsche</h2>
+                <p class="card-first-model">718 GT4</p>
+              </div>
+            </div>
+            <img class="card-first-img" src="/assets/Cars/Porsche/porsche-718-cayman-gt4.webp" alt="911 Carrera">
+          </header>
+          <div class="card-first-body">
+            <div class="card-first-features">
+              <div class="card-first-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-first-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-first-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-first-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <div class="card-first-price">
+              <i class="text-price fa-solid fa-dollar-sign">950</i>
+              <p>/día</p>
+            </div>
+          </div>
+        </article>
+        <article class="card-cars-first">
+          <header class="card-first-header">
+            <div class="card-first-info">
+              <img class="card-first-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-first-name">
+                <h2 class="card-first-make">Porsche</h2>
+                <p class="card-first-model">718 GTS 4.0</p>
+              </div>
+            </div>
+            <img class="card-first-img" src="/assets/Cars/Porsche/porsche-718-cayman-gts-4.webp" alt="911 Carrera">
+          </header>
+          <div class="card-first-body">
+            <div class="card-first-features">
+              <div class="card-first-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-first-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-first-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-first-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <div class="card-first-price">
+              <i class="text-price fa-solid fa-dollar-sign">950</i>
+              <p>/día</p>
+            </div>
+          </div>
+        </article>
+        <article class="card-cars-first">
+          <header class="card-first-header">
+            <div class="card-first-info">
+              <img class="card-first-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-first-name">
+                <h2 class="card-first-make">Porsche</h2>
+                <p class="card-first-model">718 Style Edition</p>
+              </div>
+            </div>
+            <img class="card-first-img" src="/assets/Cars/Porsche/porsche-718-cayman-style-edition.webp"
+              alt="911 Carrera">
+          </header>
+          <div class="card-first-body">
+            <div class="card-first-features">
+              <div class="card-first-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-first-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-first-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-first-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <div class="card-first-price">
+              <i class="text-price fa-solid fa-dollar-sign">950</i>
+              <p>/día</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <div class="custom-container">
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="section-heading">
+        <h2 class="section-heading-title">Vehículos destacados</h2>
+        <h5 class="section-heading-subtitle">Más de 100 unidades disponibles</h5>
+      </div>
+
+      <section class="card-cars-second-container">
+        <article class="card-cars-second">
+          <header class="card-cars-second-header">
+            <div class="card-second-info">
+              <img class="card-second-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-second-name">
+                <h2 class="card-second-make">Porsche</h2>
+                <p class="card-second-model">718 Cayman</p>
+              </div>
+            </div>
+            <img class="card-second-img" src="/assets/Cars/Porsche/porsche-718-cayman.webp" alt="911 Carrera">
+          </header>
+          <div class="card-second-body">
+            <div class="card-second-features">
+              <div class="card-tag card-second-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-tag card-second-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-tag card-second-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-tag card-second-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <p class="card-second-description">
+              Los modelos 718 se han construido para el deporte puro. Son automóviles deportivos con motor central que
+              aúnan el espíritu deportivo del legendario Porsche 718 con el vehículo deportivo del futuro y lo llevan a
+              las carreteras de este mundo. Con un objetivo: acabar con la monotonía del día a día.
+            </p>
+            <div class="card-second-values">
+              <div class="card-second-date">13/09/2023</div>
+              <div class="card-second-price">
+                <i class="text-second-price fa-solid fa-dollar-sign">950</i>
+                <p>/día</p>
+              </div>
+            </div>
+          </div>
+          <footer class="card-second-footer">
+            <a class="card-second-btn" href="#">Ver más</a>
+            <button class="card-second-btn">Alquilar</button>
+          </footer>
+        </article>
+
+        <article class="card-cars-second">
+          <header class="card-cars-second-header">
+            <div class="card-second-info">
+              <img class="card-second-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-second-name">
+                <h2 class="card-second-make">Porsche</h2>
+                <p class="card-second-model">718 Spyder RS</p>
+              </div>
+            </div>
+            <img class="card-second-img" src="/assets/Cars/Porsche/porsche-718-spyder-rs.webp" alt="911 Carrera">
+          </header>
+          <div class="card-second-body">
+            <div class="card-second-features">
+              <div class="card-tag card-second-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-tag card-second-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-tag card-second-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-tag card-second-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <p class="card-second-description">
+              Tomas de aire adicionales, lamas de ventilación, mayor carga aerodinámica: el 718 Spyder RS provoca un entusiasmo tempestuoso, también gracias a la característica Flyline y a los elementos aerodinámicos.
+            </p>
+            <div class="card-second-values">
+              <div class="card-second-date">13/09/2023</div>
+              <div class="card-second-price">
+                <i class="text-second-price fa-solid fa-dollar-sign">950</i>
+                <p>/día</p>
+              </div>
+            </div>
+          </div>
+          <footer class="card-second-footer">
+            <a class="card-second-btn" href="#">Ver más</a>
+            <button class="card-second-btn">Alquilar</button>
+          </footer>
+        </article>
+        <article class="card-cars-second">
+          <header class="card-cars-second-header">
+            <div class="card-second-info">
+              <img class="card-second-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-second-name">
+                <h2 class="card-second-make">Porsche</h2>
+                <p class="card-second-model">718 Spyder</p>
+              </div>
+            </div>
+            <img class="card-second-img" src="/assets/Cars/Porsche/porsche-718-spyder.webp" alt="911 Carrera">
+          </header>
+          <div class="card-second-body">
+            <div class="card-second-features">
+              <div class="card-tag card-second-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-tag card-second-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-tag card-second-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-tag card-second-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <p class="card-second-description">
+              El pronunciado labio del spoiler frontal con anagrama «Spyder», con una extensión adicional delante de los pasos de rueda, reduce el empuje ascendente en el eje delantero. La toma de aire central del carenado delantero optimiza la aerodinámica aún más y dirige la corriente de aire hacia arriba a través de la abertura de salida delante del capó delantero. Las grandes tomas de aire con rejilla garantizan una elevada capacidad de refrigeración.
+            </p>
+            <div class="card-second-values">
+              <div class="card-second-date">13/09/2023</div>
+              <div class="card-second-price">
+                <i class="text-second-price fa-solid fa-dollar-sign">950</i>
+                <p>/día</p>
+              </div>
+            </div>
+          </div>
+          <footer class="card-second-footer">
+            <a class="card-second-btn" href="#">Ver más</a>
+            <button class="card-second-btn">Alquilar</button>
+          </footer>
+        </article>
+        <article class="card-cars-second">
+          <header class="card-cars-second-header">
+            <div class="card-second-info">
+              <img class="card-second-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-second-name">
+                <h2 class="card-second-make">Porsche</h2>
+                <p class="card-second-model">911 Turbo Cabriolet</p>
+              </div>
+            </div>
+            <img class="card-second-img" src="/assets/Cars/Porsche/porsche-911-turbo-cabriolet.webp" alt="911 Carrera">
+          </header>
+          <div class="card-second-body">
+            <div class="card-second-features">
+              <div class="card-tag card-second-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-tag card-second-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-tag card-second-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-tag card-second-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <p class="card-second-description">
+              A nuestros ingenieros les gusta hablar del automóvil deportivo más perfecto de la historia. Extremadamente deportivo, cómodo y apto para el día a día. Los modelos 911 Turbo avanzan por este camino.
+            </p>
+            <div class="card-second-values">
+              <div class="card-second-date">13/09/2023</div>
+              <div class="card-second-price">
+                <i class="text-second-price fa-solid fa-dollar-sign">950</i>
+                <p>/día</p>
+              </div>
+            </div>
+          </div>
+          <footer class="card-second-footer">
+            <a class="card-second-btn" href="#">Ver más</a>
+            <button class="card-second-btn">Alquilar</button>
+          </footer>
+        </article>
+        <article class="card-cars-second">
+          <header class="card-cars-second-header">
+            <div class="card-second-info">
+              <img class="card-second-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-second-name">
+                <h2 class="card-second-make">Porsche</h2>
+                <p class="card-second-model">911 Turbo S Cabriolet</p>
+              </div>
+            </div>
+            <img class="card-second-img" src="/assets/Cars/Porsche/porsche-911-turbo-s-cabriolet.webp"
+              alt="911 Carrera">
+          </header>
+          <div class="card-second-body">
+            <div class="card-second-features">
+              <div class="card-tag card-second-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-tag card-second-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-tag card-second-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-tag card-second-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <p class="card-second-description">
+              Formas clásicas deportivas desde la parte trasera hasta la delantera, sin olvidar las vistas laterales: un diseño atemporal que muestra el camino a seguir con cada detalle.
+            </p>
+            <div class="card-second-values">
+              <div class="card-second-date">13/09/2023</div>
+              <div class="card-second-price">
+                <i class="text-second-price fa-solid fa-dollar-sign">950</i>
+                <p>/día</p>
+              </div>
+            </div>
+          </div>
+          <footer class="card-second-footer">
+            <a class="card-second-btn" href="#">Ver más</a>
+            <button class="card-second-btn">Alquilar</button>
+          </footer>
+        </article>
+        <article class="card-cars-second">
+          <header class="card-cars-second-header">
+            <div class="card-second-info">
+              <img class="card-second-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-second-name">
+                <h2 class="card-second-make">Porsche</h2>
+                <p class="card-second-model">911 Turbo S</p>
+              </div>
+            </div>
+            <img class="card-second-img" src="/assets/Cars/Porsche/porsche-911-turbo-s.webp" alt="911 Carrera">
+          </header>
+          <div class="card-second-body">
+            <div class="card-second-features">
+              <div class="card-tag card-second-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-tag card-second-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-tag card-second-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-tag card-second-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <p class="card-second-description">
+              Aquí entran en juego, por ejemplo, los turbo compresores de mayor tamaño y, por primera vez, los inyectores piezoeléctricos. Las condiciones optimizadas de circulación de los gases en los colectores de escape, recuperados del 911 GT2 RS, mejoran la capacidad de respuesta y la eficiencia.
+            </p>
+            <div class="card-second-values">
+              <div class="card-second-date">13/09/2023</div>
+              <div class="card-second-price">
+                <i class="text-second-price fa-solid fa-dollar-sign">950</i>
+                <p>/día</p>
+              </div>
+            </div>
+          </div>
+          <footer class="card-second-footer">
+            <a class="card-second-btn" href="#">Ver más</a>
+            <button class="card-second-btn">Alquilar</button>
+          </footer>
+        </article>
+        <article class="card-cars-second">
+          <header class="card-cars-second-header">
+            <div class="card-second-info">
+              <img class="card-second-logo" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porche">
+              <div class="card-second-name">
+                <h2 class="card-second-make">Porsche</h2>
+                <p class="card-second-model">911 Turbo</p>
+              </div>
+            </div>
+            <img class="card-second-img" src="/assets/Cars/Porsche/porsche-911-turbo.webp" alt="911 Carrera">
+          </header>
+          <div class="card-second-body">
+            <div class="card-second-features">
+              <div class="card-tag card-second-seats">
+                <i class="fa-regular fa-user"></i>
+                <p>2</p>
+              </div>
+              <div class="card-tag card-second-transmission">
+                <i class="fa-solid fa-retweet"></i>
+                <p>Manual</p>
+              </div>
+              <div class="card-tag card-second-fuel">
+                <i class="fa-solid fa-droplet"></i>
+                <p>Gasolina</p>
+              </div>
+              <div class="card-tag card-second-type">
+                <i class="fa-solid fa-car-side"></i>
+                <p>Sports</p>
+              </div>
+            </div>
+            <p class="card-second-description">
+              A nuestros ingenieros les gusta hablar del automóvil deportivo más perfecto de la historia. Extremadamente deportivo, cómodo y apto para el día a día. Los modelos 911 Turbo avanzan por este camino.
+            </p>
+            <div class="card-second-values">
+              <div class="card-second-date">13/09/2023</div>
+              <div class="card-second-price">
+                <i class="text-second-price fa-solid fa-dollar-sign">950</i>
+                <p>/día</p>
+              </div>
+            </div>
+          </div>
+          <footer class="card-second-footer">
+            <a class="card-second-btn" href="#">Ver más</a>
+            <button class="card-second-btn">Alquilar</button>
+          </footer>
+        </article>
+      </section>
+    </div>
+
+    <div class="custom-container">
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="section-heading">
+        <h2 class="section-heading-title">Buscar por marca</h2>
+        <h5 class="section-heading-subtitle">Más de 15 marcas</h5>
+      </div>
+
+      <div class="card-simple-container">
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Alfa-Romeo.png"
+              alt="Logo Alfa Romeo">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Alfa Romeo</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Aston-Martin.png"
+              alt="Logo Aston Martin">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Aston Martin</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Audi.png" alt="Logo Audi">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Audi</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-BMW.png" alt="Logo BMW">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">BMW</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Bugatti.png" alt="Logo Bugatti">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Bugatti</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Ferrari.png" alt="Logo Ferrari">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Ferrari</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Jaguar.png" alt="Logo Jaguar">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Jaguar</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Koenigsegg.png"
+              alt="Logo Koenigsegg">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Koenigsegg</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Lamborghini.png"
+              alt="Logo Lamborghini">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Lamborghini</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Maserati.png"
+              alt="Logo Maserati">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Maserati</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-McLaren.png" alt="Logo McLaren">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">McLaren</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Mercedes-Benz.png"
+              alt="Logo Mercedes Benz">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Mercedes Benz</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Pagani.png" alt="Logo Pagani">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Pagani</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img img-grayscale-filter" src="/assets/Brands/Logo-Porsche.png" alt="Logo Porsche">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Porsche</h3>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="custom-container">
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="section-heading">
+        <h2 class="section-heading-title">Buscar por tipo</h2>
+        <h5 class="section-heading-subtitle">Más de 5 tipos</h5>
+      </div>
+      <div class="card-simple-container">
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img" src="/assets/Types/Type-Chauffeur.png" alt="Brand-Alfa-Romeo">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Chauffeur</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img" src="/assets/Types/Type-Convertible.jpg" alt="Brand-Alfa-Romeo">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Convertible</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img" src="/assets/Types/Type-Coupe-Sports.jpg" alt="Brand-Alfa-Romeo">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Coupe | Sports</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img" src="/assets/Types/Type-EV.png" alt="Brand-Alfa-Romeo">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">EV</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img" src="/assets/Types/Type-Sedan-4-Door.jpg" alt="Brand-Alfa-Romeo">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Sedan | 4-Door</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img" src="/assets/Types/Type-Supercar.jpg" alt="Brand-Alfa-Romeo">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Supercar</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img" src="/assets/Types/Type-SUV.png" alt="Brand-Alfa-Romeo">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">SUVs</h3>
+          </div>
+        </article>
+
+        <article class="card-simple">
+          <header class="card-simple-header">
+            <img class="card-simple-img" src="/assets/Types/Type-Ultra-Luxury.jpg" alt="Brand-Alfa-Romeo">
+          </header>
+          <div class="card-simple-body">
+            <h3 class="card-simple-title">Ultra Luxury</h3>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="custom-container">
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="section-heading">
+        <h2 class="section-heading-title">Reseñas recientes</h2>
+        <h5 class="section-heading-subtitle">Lo que nuestros clientes están diciendo</h5>
+      </div>
+
+      <section class="card-testimonial-container">
+        <article class="card-testimonial">
+          <header class="card-testimonial-header">
+            <p class="card-testimonial-review">“ Llamé a The SuperCar Club - Car Rental a las 9:00 a. m. para preguntar
+              sobre la disponibilidad del auto de mis sueños y me entregaron el Lamborghini a las 11:00 a. m. del mismo
+              día. La transacción fue simple y fluida. ”</p>
+          </header>
+          <footer class="card-testimonial-footer">
+            <p class="card-testimonial-date">09/06/2023</p>
+            <h4 class="card-testimonial-autor">- Shawn H.</h4>
+          </footer>
+        </article>
+        <article class="card-testimonial">
+          <header class="card-testimonial-header">
+            <p class="card-testimonial-review">“ The SuperCar Club es una empresa increíble. Tenían el Lamborghini
+              exacto que necesitábamos y estaba en perfectas condiciones. La empresa es muy hospitalaria y el proceso es
+              sencillo. Nos explicaron todo con el coche e hicieron un recorrido extenso. ”</p>
+          </header>
+          <footer class="card-testimonial-footer">
+            <p class="card-testimonial-date">14/09/2022</p>
+            <h4 class="card-testimonial-autor">- Eugene S.</h4>
+          </footer>
+        </article>
+        <article class="card-testimonial">
+          <header class="card-testimonial-header">
+            <p class="card-testimonial-review">“ Falcon Car Rental hizo un esfuerzo adicional por nuestra empresa (nunca
+              mejor dicho). Fueron muy serviciales y la comunicación fue eficiente. Utilizamos el magnífico Rolls Royce
+              Dawn para nuestro vídeo musical con gran éxito. ”</p>
+          </header>
+          <footer class="card-testimonial-footer">
+            <p class="card-testimonial-date">04/03/2022</p>
+            <h4 class="card-testimonial-autor">- Gianna C.</h4>
+          </footer>
+        </article>
+        <article class="card-testimonial">
+          <header class="card-testimonial-header">
+            <p class="card-testimonial-review">“ Si buscas coches de calidad y un buen servicio, no te equivocarás aquí.
+              El mejor servicio de alquiler de coches en Perú, sin duda. Tercera vez que alquilo desde aquí, nunca me
+              decepcionó. ”</p>
+          </header>
+          <footer class="card-testimonial-footer">
+            <p class="card-testimonial-date">25/04/2021</p>
+            <h4 class="card-testimonial-autor">- Ryan M.</h4>
+          </footer>
+        </article>
+        <article class="card-testimonial">
+          <header class="card-testimonial-header">
+            <p class="card-testimonial-review">“ La asistencia que recibí fue excelente. Alquilé un Mercedes S550
+              Cabriolet para el baile de graduación de mi hija y fueron muy serviciales. ¡Se los recomendaría a todos y
+              los usaré nuevamente en el futuro! ”</p>
+          </header>
+          <footer class="card-testimonial-footer">
+            <p class="card-testimonial-date">17/09/2020</p>
+            <h4 class="card-testimonial-autor">- Cathy J.</h4>
+          </footer>
+        </article>
+      </section>
+
+    </div>
+
+    <div class="custom-container">
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="section-heading">
+        <h2 class="section-heading-title">Marcas destacadas</h2>
+        <h5 class="section-heading-subtitle">Más de 10 marcas disponibles</h5>
+      </div>
+      <div class="slider-brands-container">
+        <div class="slide-track">
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Alfa-Romeo.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Aston-Martin.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Audi.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-BMW.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Bugatti.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Ferrari.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Jaguar.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Koenigsegg.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Lamborghini.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Maserati.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-McLaren.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Mercedes-Benz.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Pagani.png" alt="brand 1">
+          </div>
+          <div class="slide-brand">
+            <img src="/assets/Brands/Brand-Porsche.png" alt="brand 1">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-container">
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="section-container margin-t-3">
+      <div class="section-heading">
+        <h2 class="section-heading-title">Cómo rentar un vehiculo</h2>
+        <h5 class="section-heading-subtitle">3 simples pasos</h5>
+      </div>
+    </div>
+    <section class="features-section">
+      <div class="feature">
+        <i class="fa-solid fa-car"></i>
+        Escoge un vehículo
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-laptop"></i>
+        Cotiza online
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-clock"></i>
+        Recoge el vehículo o te lo llevamos
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-company">
+      <section class="footer-section">
+        <a class="footer-logo-link" href="">
+          <img class="footer-logo" src="/assets/logo-TheSupercarClub.png" alt="logo-img">
+        </a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam nobis ea recusandae, repudiandae id quae
+          dignissimos, blanditiis dolore esse architecto rerum suscipit sapiente omnis ut vel ratione laudantium soluta
+          placeat quas. Porro perferendis totam, corporis expedita quaerat rerum earum nulla architecto, placeat quia
+          deleniti excepturi labore. Tenetur sint corporis, exercitationem sunt porro soluta error, adipisci deserunt,
+          in pariatur sed repellat!</p>
+        <div class="footer-icons">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </section>
+
+      <section class="footer-section">
+        <h4>Compañía</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="/index.html">Inicio</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="/pages/about-us/about-us.html">Acerca de</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Servicio</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="/pages/contact/contact.html">Contacto</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-section">
+        <h4>Recursos</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="#">Blog</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Galería</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Eventos</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Boletín</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-section">
+        <h4>Social</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="https://twitter.com/?lang=es" target="_blank">Twitter</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="https://www.instagram.com/" target="_blank">instagram</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="https://pe.linkedin.com/" target="_blank">Linkedin</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer-section">
+        <h4>Legal</h4>
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a class="footer-link" href="#">Términos</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Privacidad</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Cookies</a>
+          </li>
+          <li class="footer-item">
+            <a class="footer-link" href="#">Licencias</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <small class="footer-copyright">
+      <i class="fa-regular fa-copyright"></i> My Company Ltd. <span id="year"></span>, Todos los derechos
+      reservados.</span>
+    </small>
+
+  </footer>
+
+
+  <div class="whatsapp-container">
+    <a href="https://crear.wa.link/" target="_blank">
+      <img class="whatsapp-img" src="/assets/WhatsApp-logo.png" alt="whatsapp logo" />
+    </a>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
