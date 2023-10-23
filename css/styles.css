@@ -108,7 +108,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 86px;
-    z-index: 2;
+    z-index: 4;
 
     background-color: var(--header-bg-color);
 }
