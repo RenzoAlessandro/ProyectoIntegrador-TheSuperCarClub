@@ -294,6 +294,7 @@
     align-items: center;
     gap: 4rem;
     list-style: none;
+    padding: 4rem;
 
     & li {
         display: flex;
