@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SuperCar Club</title>
   <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/ui-basic.css">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/ui-elements.css">
   <link rel="stylesheet" href="/css/contact-styles.css">
@@ -88,54 +89,55 @@
         <div class="contact-wrapper">
           <h1 class="title-form contact-title">Contáctenos</h1>
           <p class="message">¡A nuestro amigable equipo le encantaría saber de usted!</p>
-          <form class="form contact-form">
+          <form class="form contact-form ">
 
             <div class="flex-row">
-              <div class="input-wrapper">
+              <div class="input-group">
                 <label for="firstname">Nombres</label>
-                <input class="inputSimple" type="text" name="firstname" id="firstname" 
-                required 
+                <input class="inputSimple" type="text" name="firstname" id="firstname"  
                 minlength="5" 
-                maxlength="80">
+                maxlength="80"
+                required>
               </div>
 
-              <div class="input-wrapper">
+              <div class="input-group">
                 <label for="lastname">Apellidos</label>
-                <input class="inputSimple" type="text" name="lastname" id="lastname" 
-                required 
+                <input class="inputSimple" type="text" name="lastname" id="lastname"  
                 minlength="5" 
-                maxlength="80">
+                maxlength="80"
+                required>
               </div>
             </div>
 
-            <div class="input-wrapper">
-              <label for="email">Correo Electrónico</label>
-              <input class="inputSimple" type="email" name="email" id="email" 
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              required 
-              minlength="5" 
-              maxlength="80">
+            <div class="flex-row">
+              <div class="input-group">
+                <label for="email">Correo Electrónico</label>
+                <input class="inputSimple" type="email" name="email" id="email" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                minlength="5" 
+                maxlength="80"
+                required>
+              </div>
+  
+              <div class="input-group">
+                <label for="phone">Número de Teléfono</label>
+                <input class="inputSimple" type="tel" name="phone" id="phone" 
+                pattern="[0-9]{9}$" 
+                minlength="5" 
+                maxlength="80"
+                required>
+              </div>
             </div>
 
-            <div class="input-wrapper">
-              <label for="phone">Número de Teléfono</label>
-              <input class="inputSimple" type="tel" name="phone" id="phone" 
-              pattern="[0-9]{9}$"
-              required 
-              minlength="5" 
-              maxlength="80">
-            </div>
-
-            <div class="input-wrapper">
+            <div class="input-group">
               <label for="message">Mensaje</label>
               <textarea class="textareaSimple" name="message" id="message" rows="4"
-              required
               minlength="10" 
               maxlength="400"
-              ></textarea>
+              required></textarea>
             </div>
 
-            <div class="input-wrapper">
+            <div class="input-group">
               <button class="buttonSimple" type="submit">Enviar</button>
             </div>
           </form>

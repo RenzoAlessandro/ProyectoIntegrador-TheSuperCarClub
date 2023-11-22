@@ -1,31 +1,64 @@
-margin-t-3 {
-    margin-top: 3rem;
+.margin-y-1 {
+    margin: 1rem 0;
 }
 
-margin-b-3 {
-    margin-bottom: 3rem;
+.margin-x-1 {
+    margin: 0 1rem;
 }
 
-margin-y-3 {
-    margin: 3rem 0;
+.margin-t-1 {
+    margin-top: 1rem;
 }
 
-margin-x-3 {
-    margin: 0 3rem;
+.margin-b-1 {
+    margin-bottom: 1rem;
 }
 
-padding-t-3{
-    padding-top: 3rem;
+.padding-1 {
+    padding: 1rem;
 }
 
-padding-b-3{
-    padding-bottom: 3rem;
+.padding-t-1{
+    padding-top: 1rem;
 }
 
-padding-y-3{
-    padding: 3rem 0;
+.padding-b-1{
+    padding-bottom: 1rem;
 }
 
-padding-x-3{
-    padding: 0 3rem;
+.padding-y-1{
+    padding: 1rem 0;
+}
+
+.padding-x-1{
+    padding: 0 1rem;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center;
+    justify-content: center; */
+    flex-wrap:wrap;
+    width: 100%;
+    gap: 12px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    flex-wrap:wrap;
+    width: 100%;
+    gap: 12px;
+}
+
+.position-sticky {
+    position: sticky;
+    top: 113px
 }
