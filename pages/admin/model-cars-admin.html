@@ -1,11 +1,310 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuperCar Club</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/forms-pages.css">
+    <link rel="stylesheet" href="/css/ui-elements.css">
+    <link rel="stylesheet" href="/css/ui-basic.css">
+    <link rel="stylesheet" href="/css/admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
+    <header class="main-header">
+        <input class="input-check" type="checkbox" id="check-menu">
+
+        <label class="burger-menu" for="check-menu">
+            <div class="burger-line"></div>
+        </label>
+
+        <a class="logo-link" href="/index.html">
+            <picture>
+                <!-- <source class="banner-img" srcset="/assets/porsche-logo-1.png" media="(width > 1200px)"> -->
+                <img class="nav-logo" src="/assets/logo-TheSupercarClub.png" alt="logo-img">
+            </picture>
+        </a>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/model-cars/model-cars.html">Modelos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/register/register.html">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/login/login.html">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/admin/user-admin.html">Admin User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/admin/model-cars-admin.html">Admin Models</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="user-menu">
+
+            <button class="switch" id="switch">
+                <span>
+                    <i class="fa-solid fa-sun"></i>
+                </span>
+                <span>
+                    <i class="fa-solid fa-moon"></i>
+                </span>
+            </button>
+
+            <a class="find-link" href="#" title='Buscar modelo'>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a class="info-link" href="#" title='información'>
+                <i class="fa-solid fa-circle-info"></i>
+            </a>
+            <a class="shopping-link" href="#" title='Autos rentados'>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <a class="user-link" href="#" title='Mi perfil'>
+                <div class="username-link">User Name</div>
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- <h1>Administrador de Usuarios</h1> -->
+
+    <div class="main-container">
+        <div class="left-container">
+            <form id="model-car-form" class="container position-sticky" action="register">
+                <div class="box-form">
+                    <div class="info-form">
+                        <h3>Administrador de Modelos</h3>
+                        <h2 id="subtitle" class="title-form">REGISTRA UN VEHÍCULO</h2>
+                        <p id="message" class="message">Registra un vehículo en la flota.</p>
+                    </div>
+                    <div class="main-form">
+
+                        <input type="hidden" name="id">
+
+                        <div class="flex-row">
+                            <div class="input-group">
+                                <label for="inputBrand">Marca*</label>
+                                <div class="inputIconForm">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <select class="inputIcon" name="marca" id="inputBrand">
+                                        <option value="Alfa Romeo">Alfa Romeo</option>
+                                        <option value="Aston Martin">Aston Martin</option>
+                                        <option value="Audi">Audi</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Bugatti">Bugatti</option>
+                                        <option value="Ferrari">Ferrari</option>
+                                        <option value="Jaguar">Jaguar</option>
+                                        <option value="Koenigsegg">Koenigsegg</option>
+                                        <option value="Lamborghini">Lamborghini</option>
+                                        <option value="Maserati">Maserati</option>
+                                        <option value="McLaren">McLaren</option>
+                                        <option value="Mercedes Benz">Mercedes Benz</option>
+                                        <option value="Pagani">Pagani</option>
+                                        <option value="Porsche">Porsche</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="inputModel">Modelo*</label>
+                                <div class="inputIconForm">
+                                    <i class="fa-solid fa-car"></i>
+                                    <input class="inputIcon" type="text" name="modelo" id="inputModel"
+                                        placeholder="Giulia" minlength="5" maxlength="50" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-row">
+                            <div class="input-group">
+                                <label for="inputEngine">Motor*</label>
+                                <div class="inputIconForm">
+                                    <i class="fa-solid fa-user"></i>
+                                    <input class="inputIcon" type="text" name="motor" id="inputEngine"
+                                        placeholder="Giulia" minlength="5" maxlength="50" required>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="selectType">Tipo*</label>
+                                <div class="inputIconForm">
+                                    <i class="fa-solid fa-swatchbook"></i>
+                                    <select class="inputIcon" name="tipo" id="selectType">
+                                        <option value="Deportivo">Deportivo</option>
+                                        <option value="Convertible">Convertible</option>
+                                        <option value="Sedan">Sedan</option>
+                                        <option value="Eléctrico">Eléctrico</option>
+                                        <option value="Supercar">Supercar</option>
+                                        <option value="SUV">SUV</option>
+                                        <option value="Ultra Luxury">Ultra Luxury</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-row">
+                            <div class="input-group">
+                                <label for="selectTransmission">Transmisión*</label>
+                                <div class="inputIconForm">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <select class="inputIcon" name="transmision" id="selectTransmission">
+                                        <option value="Mécanico">Mécanico</option>
+                                        <option value="Automático">Automático</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label for="selectFuel">Combustible*</label>
+                                <div class="inputIconForm">
+                                    <i class="fa-solid fa-gas-pump"></i>
+                                    <select class="inputIcon" name="combustible" id="selectFuel">
+                                        <option value="Gasolina">Gasolina</option>
+                                        <option value="Diesel">Diesel</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-row">
+                            <div class="input-group">
+                                <label for="inputReleaseYear">Año*</label>
+                                <div class="inputIconForm">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <input class="inputIcon" type="date" name="anio" id="inputReleaseYear" required>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="selectLocation">Sede*</label>
+                                <div class="inputIconForm">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <select class="inputIcon" name="sede" id="selectLocation">
+                                        <option value="Alemania">Alemania</option>
+                                        <option value="Japón">Japón</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-row">
+                            <div class="input-group">
+                                <label for="inputSeats">Asientos*</label>
+                                <div class="inputIconForm">
+                                    <i class="fa-solid fa-person"></i>
+                                    <input class="inputIcon" type="number" name="asientos" id="inputSeats" min="1" max="5" value="2" required>
+                                </div>
+                            </div>
     
+                            <div class="input-group">
+                                <label for="inputPrice24h">Precio/24h ($)*</label>
+                                <div class="inputIconForm">
+                                    <i class="fa-solid fa-dollar-sign"></i>
+                                    <input class="inputIcon" type="number" name="precio_24h" id="inputPrice24h" min="1" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="inputBrandImg">Imagen del Logo (URL)*</label>
+                            <div class="inputIconForm">
+                                <i class="fa-solid fa-image"></i>
+                                <input class="inputIcon" id="inputBrandImg" type="text" name="logoImg"
+                                    value="/assets/Brands/Logo-Alfa-Romeo.png" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="inputCarImg">Imagen del Vehículo (URL)*</label>
+                            <div class="inputIconForm">
+                                <i class="fa-solid fa-image"></i>
+                                <input class="inputIcon" id="inputCarImg" type="text" name="autoImg"
+                                    value="/assets/Cars/Porsche/porsche-718-cayman-gts-4.webp" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="inputDescription">Descripción*</label>
+                            <div class="inputIconForm">
+                                <i class="fa-solid fa-file-lines"></i>
+                                <textarea id="inputDescription" class="inputIcon" name="descripcion" rows="10" cols="50" placeholder="Escribe algo aquí..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="inputCarActive" class="cyberpunk-checkbox-label">
+                                <input class="cyberpunk-checkbox" type="checkbox" name="active" id="inputCarActive">
+                                Vehículo Activo</label>
+                        </div>
+
+                        <button class="buttonSimple" type="submit">
+                            Registrar Vehículo
+                        </button>
+                    </div>
+                    <div class="info-form">
+                        <small class="message"><b>* CAMPOS REQUERIDOS</b></small>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="right-container">
+            <div class="container">
+
+                <div class="input-group width-100 margin-y-1">
+                    <div class="inputIconForm">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="inputIcon" type="text" id="searchModelCar" placeholder="Buscar por modelo..."
+                            class="inputs">
+                    </div>
+                </div>
+
+                <table class="user-table">
+                    <thead>
+                        <tr class="table-head">
+                            <th>Imagen</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Tipo</th>
+                            <th>Año</th>
+                            <th>Motor</th>
+                            <th>Transmision</th>
+                            <th>Combustible</th>
+                            <th>Asientos</th>
+                            <th>Precio 24h</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/formatDate.js"></script>
+    <script src="/js/model-cars-admin.js"></script>
 </body>
+
 </html>

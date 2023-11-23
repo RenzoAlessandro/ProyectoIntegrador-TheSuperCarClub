@@ -215,7 +215,7 @@ const usersStart = [
         id: '17',
         active: false,
         password: 'password303',
-        bornDate: new Date('1989-07-07T00:00:00').getTime(),
+        bornDate: new Date('1989-07-07').getTime(),
         location: 'San Francisco, CA',
         image: 'https://oyster.ignimgs.com/mediawiki/apis.ign.com/mario-kart-for-wii-u/b/bf/Mk8iconmario.png?width=325',
         role: 'CLIENT_ROLE'
@@ -228,7 +228,7 @@ const usersStart = [
         id: '18',
         active: true,
         password: 'password404',
-        bornDate: new Date('2001-11-11T00:00:00').getTime(),
+        bornDate: new Date('2001-11-11').getTime(),
         location: 'Boston, MA',
         image: 'https://oyster.ignimgs.com/mediawiki/apis.ign.com/mario-kart-for-wii-u/2/2d/Mk8icondk.png?width=325',
         role: 'CLIENT_ROLE'
@@ -241,7 +241,7 @@ const usersStart = [
         id: '19',
         active: false,
         password: 'password505',
-        bornDate: new Date('1978-12-19T00:00:00').getTime(),
+        bornDate: new Date('1978-12-19').getTime(),
         location: 'Dallas, TX',
         image: "https://m.media-amazon.com/images/I/81wNRtDaTXL.png",
         role: 'CLIENT_ROLE'
@@ -254,7 +254,7 @@ const usersStart = [
         id: '20',
         active: true,
         password: 'password606',
-        bornDate: new Date('2015-12-04T00:00:00').getTime(),
+        bornDate: new Date('2015-12-04').getTime(),
         location: 'San Diego, CA',
         image: 'https://oyster.ignimgs.com/mediawiki/apis.ign.com/mario-kart-for-wii-u/3/3a/Mk8iconkoopa.png?width=325',
         role: 'CLIENT_ROLE'
@@ -263,4 +263,69 @@ const usersStart = [
 
 if(localStorage.getItem("users") === null) {
     localStorage.setItem("users", JSON.stringify(usersStart));
+}
+
+
+const modelCarsStart = [
+    {
+        id: '1',
+        marca: 'Porsche',
+        modelo: '718 Cayman',
+        motor: '4.0L V6',
+        anio: new Date('2016-01-01').getTime(),
+        transmision: 'Mécanico', // Automático
+        combustible: 'Gasolina', // Diesel
+        tipo: 'Deportivo', // Convertible, Sedan, Eléctrico, Supercar, SUV, Ultra Luxury
+        sede: 'Alemania',
+        asientos: 2,
+        precio_24h: 986,
+        active: true,
+        logoImg: '/assets/Brands/Brand-Porsche.png',
+        autoImg: '/assets/Cars/Porsche/porsche-718-cayman.webp',
+        descripcion: 'Los modelos 718 GTS 4.0 cubren una amplia gama de prestaciones. Garantía de ello es el motor atmosférico de 4.0 litros y 6 cilindros capaz de desarrollar unos rotundos 400 CV (294 kW) a 7.000 rpm. El par máximo: 420 Nm. En combinación con el PDK: 430 Nm. Aceleración de 0 a 100 km/h: 4,0 segundos con PDK y Launch Control. Velocidad máxima: 288 km/h. En combinación con una caja de cambios manual de 6 velocidades, incluso hasta 293 km/h.'
+    },
+
+    {
+        id: '2',
+        marca: 'Porsche',
+        modelo: '911',
+        motor: '4.0L V6',
+        anio: new Date('2016-01-01').getTime(),
+        transmision: 'Mécanico', // Automático
+        combustible: 'Gasolina', // Diesel
+        tipo: 'Deportivo', // Convertible, Sedan, Eléctrico, Supercar, SUV, Ultra Luxury
+        sede: 'Alemania',
+        asientos: 2,
+        precio_24h: 986,
+        active: true,
+        logoImg: '/assets/Brands/Brand-Porsche.png',
+        autoImg: '/assets/Cars/Porsche/porsche-718-cayman.webp',
+        descripcion: 'Los modelos 718 GTS 4.0 cubren una amplia gama de prestaciones. Garantía de ello es el motor atmosférico de 4.0 litros y 6 cilindros capaz de desarrollar unos rotundos 400 CV (294 kW) a 7.000 rpm. El par máximo: 420 Nm. En combinación con el PDK: 430 Nm. Aceleración de 0 a 100 km/h: 4,0 segundos con PDK y Launch Control. Velocidad máxima: 288 km/h. En combinación con una caja de cambios manual de 6 velocidades, incluso hasta 293 km/h.'
+    },
+
+    {
+        id: '3',
+        marca: 'Porsche',
+        modelo: 'Impresa',
+        motor: '4.0L V6',
+        anio: new Date('2016-01-01').getTime(),
+        transmision: 'Mécanico', // Automático
+        combustible: 'Gasolina', // Diesel
+        tipo: 'Deportivo', // Convertible, Sedan, Eléctrico, Supercar, SUV, Ultra Luxury
+        sede: 'Alemania',
+        asientos: 2,
+        precio_24h: 986,
+        active: true,
+        logoImg: '/assets/Brands/Brand-Porsche.png',
+        autoImg: '/assets/Cars/Porsche/porsche-718-cayman.webp',
+        descripcion: 'Los modelos 718 GTS 4.0 cubren una amplia gama de prestaciones. Garantía de ello es el motor atmosférico de 4.0 litros y 6 cilindros capaz de desarrollar unos rotundos 400 CV (294 kW) a 7.000 rpm. El par máximo: 420 Nm. En combinación con el PDK: 430 Nm. Aceleración de 0 a 100 km/h: 4,0 segundos con PDK y Launch Control. Velocidad máxima: 288 km/h. En combinación con una caja de cambios manual de 6 velocidades, incluso hasta 293 km/h.'
+    },
+
+    
+
+
+];
+
+if(localStorage.getItem("modelCars") === null){
+    localStorage.setItem("modelCars", JSON.stringify(modelCarsStart));
 }

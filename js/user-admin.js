@@ -6,7 +6,7 @@ const usersArray = JSON.parse(localStorage.getItem("users")) || [];
 const tableBodyHTML = document.getElementById("table-body");
 
 // *INFO: Obtenemos el input del buscador
-const searchInputHTML = document.getElementById("#search");
+const searchInputUserHTML = document.getElementById("searchUser");
 
 // *INFO: Obtenemos el formulario
 const userFormHTML = document.querySelector("form#user-form");
@@ -36,7 +36,7 @@ function printUsers(listUsers){
                                         <td class="user-action">
                                             <button class="action-btn btn-danger" 
                                                     title="Borrar usuario"
-                                                    onclick="deleteUser('${user.id}', '${user.fullname}')">
+                                                    onclick="deleteUser('${user.id}', '${user.firstName}')">
                                             <i class="fa-solid fa-trash"></i>
                                             </button>
                                             <button class="action-btn btn-warning" 
@@ -51,8 +51,24 @@ function printUsers(listUsers){
     });
 }
 
+// *INFO: BUSCADOR POR NOMBRE DE USUARIO
+searchInputUserHTML.addEventListener('keyup', (evento) =>{
+    const inputValue = evento.target.value.toLowerCase();
+    const userFilter = usersArray.filter((user) => {
+        const firstNameUser = user.firstName.toLowerCase();
+        const lastNameUser = user.lastName.toLowerCase();
+        // Buscamos por nombre y apellido
+        if( firstNameUser.includes(inputValue) || lastNameUser.includes(inputValue)){
+            return true;
+        } else{
+            return false;
+        }
+    })
+    printUsers(userFilter);
+})
+
 // *INFO: LIMPIAMOS EL FORMULARIO DE CERO
-function resetForm() {
+function resetUserForm() {
     userFormHTML.reset();
 
     userFormHTML.elements.password.disabled = false;
@@ -72,13 +88,30 @@ function updateLocalStorage() {
 
 // *INFO: ELIMINAMOS UN USUARIO
 function deleteUser(ID, nombre) {
-    const confirmDelete = confirm(`Desea borrar a ${nombre}`);
-    if(confirmDelete){
-        const indice = usersArray.findIndex( user => user.id === ID);
-        usersArray.splice(indice,1);
-        printUsers(usersArray);
-        updateLocalStorage();
-    }
+
+    Swal.fire({
+        title: `Estas seguro que quieres borrar a ${nombre}?`,
+        text: "No podrás revertir esto!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, borralo!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+
+            const indice = usersArray.findIndex( user => user.id === ID);
+            usersArray.splice(indice,1);
+            printUsers(usersArray);
+            updateLocalStorage();
+
+            Swal.fire({
+            title: "Eliminado!",
+            text: "El usuario ha sido eliminado.",
+            icon: "success"
+            });
+        }
+    });
 }
 
 // *INFO: AGREGAMOS UN USUARIO NUEVO
@@ -150,7 +183,7 @@ userFormHTML.addEventListener("submit", (evt) => {
         });
 
     } else {
-        // AGREGANDO
+        // AGREGAR
         usersArray.push(usuario);
 
         Swal.fire({
@@ -165,7 +198,7 @@ userFormHTML.addEventListener("submit", (evt) => {
     
     printUsers(usersArray);
     updateLocalStorage();
-    resetForm();
+    resetUserForm();
 })
 
 // *INFO: EDITAR ALGUN USUARIO
@@ -177,7 +210,7 @@ function editUser(idSearch) {
         }
     })
 
-    // CLAUSULA GUARDA: indicamos el que el usuario no fue encontrado
+    // CLAUSULA GUARDA: indicamos que el usuario no fue encontrado
     if(!userEdit){
         Swal.fire({
             icon: 'warning',

@@ -54,6 +54,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/pages/admin/user-admin.html">Admin User</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/admin/model-cars-admin.html">Admin Models</a>
+        </li>
       </ul>
     </nav>
 
@@ -83,7 +86,7 @@
       </a>
     </div>
   </header>
-  
+
   <!-- <h1>Administrador de Usuarios</h1> -->
 
   <div class="main-container">
@@ -104,16 +107,9 @@
                 <label for="inputFirstName">Nombres*</label>
                 <div class="inputIconForm">
                   <i class="fa-solid fa-user"></i>
-                  <input class="inputIcon" 
-                          type="text" 
-                          name="firstName" 
-                          id="inputFirstName" 
-                          placeholder="John"
-                          minlength="5"
-                          maxlength="50"
-                          pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+( [a-zA-ZñÑáéíóúÁÉÍÓÚ]+)*$" 
-                          autofocus 
-                          required>
+                  <input class="inputIcon" type="text" name="firstName" id="inputFirstName" placeholder="John"
+                    minlength="5" maxlength="50" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+( [a-zA-ZñÑáéíóúÁÉÍÓÚ]+)*$" autofocus
+                    required>
                 </div>
               </div>
 
@@ -121,15 +117,8 @@
                 <label for="inputLastName">Apellidos*</label>
                 <div class="inputIconForm">
                   <i class="fa-solid fa-user"></i>
-                  <input class="inputIcon" 
-                          type="text" 
-                          name="lastName" 
-                          id="inputLastName" 
-                          placeholder="Doe"
-                          minlength="5" 
-                          maxlength="50" 
-                          pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+( [a-zA-ZñÑáéíóúÁÉÍÓÚ]+)*$" 
-                          required>
+                  <input class="inputIcon" type="text" name="lastName" id="inputLastName" placeholder="Doe"
+                    minlength="5" maxlength="50" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+( [a-zA-ZñÑáéíóúÁÉÍÓÚ]+)*$" required>
                 </div>
               </div>
             </div>
@@ -138,16 +127,9 @@
               <label for="inputEmail">Email*</label>
               <div class="inputIconForm">
                 <i class="fa-solid fa-at"></i>
-                <input class="inputIcon" 
-                        type="email" 
-                        name="email" 
-                        id="inputEmail" 
-                        placeholder="user@example.com"
-                        minlength="7" 
-                        maxlength="140" 
-                        pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$" 
-                        autocomplete="on"
-                        required>
+                <input class="inputIcon" type="email" name="email" id="inputEmail" placeholder="user@example.com"
+                  minlength="7" maxlength="140" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$" autocomplete="on"
+                  required>
               </div>
             </div>
 
@@ -156,13 +138,8 @@
                 <label for="inputPwd">Contraseña*</label>
                 <div class="inputIconForm">
                   <i class="fa-solid fa-lock"></i>
-                  <input class="inputIcon" 
-                          type="password" 
-                          name="password" 
-                          id="inputPwd"
-                          placeholder="Ingresa tu contraseña" 
-                          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                          required>
+                  <input class="inputIcon" type="password" name="password" id="inputPwd"
+                    placeholder="Ingresa tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                 </div>
               </div>
 
@@ -170,22 +147,17 @@
                 <label for="inputConfirmPwd">Confirmar Contraseña*</label>
                 <div class="inputIconForm">
                   <i class="fa-solid fa-lock"></i>
-                  <input class="inputIcon" 
-                          type="password" 
-                          name="password2" 
-                          id="inputConfirmPwd"
-                          placeholder="Reingresa tu contraseña" 
-                          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-                          required>
+                  <input class="inputIcon" type="password" name="password2" id="inputConfirmPwd"
+                    placeholder="Reingresa tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                 </div>
               </div>
             </div>
 
             <div class="input-group">
-              <label for="inputConfirmPwd">Localidad*</label>
+              <label for="inputLocation">Localidad*</label>
               <div class="inputIconForm">
                 <i class="fa-solid fa-location-dot"></i>
-                <select class="inputIcon" name="location" id="">
+                <select class="inputIcon" name="location" id="inputLocation">
                   <option value="New York, NY">New York, NY</option>
                   <option value="Los Angeles, CA">Los Angeles, CA</option>
                   <option value="Miami, FL">Miami, FL</option>
@@ -202,47 +174,34 @@
 
             <div class="flex-row">
               <div class="input-group">
-                <label for="inputConfirmPwd">Cumpleaños*</label>
+                <label for="inputBornDate">Cumpleaños*</label>
                 <div class="inputIconForm">
                   <i class="fa-solid fa-calendar-days"></i>
-                  <input class="inputIcon" 
-                          type="date" 
-                          name="bornDate" 
-                          id="bornDate" 
-                          required>
+                  <input class="inputIcon" type="date" name="bornDate" id="inputBornDate" required>
                 </div>
               </div>
 
               <div class="input-group">
-                <label for="inputConfirmPwd">Edad*</label>
+                <label for="inputAge">Edad*</label>
                 <div class="inputIconForm">
                   <i class="fa-solid fa-cake-candles"></i>
-                  <input class="inputIcon" 
-                          type="number" 
-                          name="age" 
-                          id="age" 
-                          min="1" 
-                          required>
+                  <input class="inputIcon" type="number" name="age" id="inputAge" min="1" required>
                 </div>
               </div>
             </div>
 
             <div class="input-group">
-              <label for="inputLastName">Foto de Perfil (URL)*</label>
+              <label for="inputProfileImg">Foto de Perfil (URL)*</label>
               <div class="inputIconForm">
                 <i class="fa-solid fa-image"></i>
-                <input class="inputIcon" 
-                        id="image"
-                        type="url" 
-                        name="image"
-                        value="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" 
-                        required>
+                <input class="inputIcon" id="inputProfileImg" type="url" name="image"
+                  value="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" required>
               </div>
             </div>
 
             <div class="input-group">
-              <label for="active" class="cyberpunk-checkbox-label">
-                <input class="cyberpunk-checkbox" type="checkbox" name="active" id="active">
+              <label for="inputUserActive" class="cyberpunk-checkbox-label">
+                <input class="cyberpunk-checkbox" type="checkbox" name="active" id="inputUserActive">
                 Usuario Activo</label>
             </div>
 
@@ -263,7 +222,7 @@
         <div class="input-group width-100 margin-y-1">
           <div class="inputIconForm">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input class="inputIcon" type="text" id="search" placeholder="Buscar por nombre..." class="inputs">
+            <input class="inputIcon" type="text" id="searchUser" placeholder="Buscar por nombre..." class="inputs">
           </div>
         </div>
 
@@ -281,7 +240,7 @@
             </tr>
           </thead>
           <tbody id="table-body">
-  
+
           </tbody>
         </table>
       </div>
@@ -292,4 +251,5 @@
   <script src="/js/formatDate.js"></script>
   <script src="/js/user-admin.js"></script>
 </body>
+
 </html>
