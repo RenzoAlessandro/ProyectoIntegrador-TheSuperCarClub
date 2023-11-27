@@ -1,5 +1,6 @@
 // *INFO: Obtenemos los datos del localstorage "MODELCARS"
 const modelCarsArray = JSON.parse(localStorage.getItem("modelCars")) || [];
+const brandsArray = JSON.parse(localStorage.getItem("brands")) || [];
 
 // *INFO: Obtenemos el body de la tabla
 const tableBodyHTML = document.getElementById("table-body");
@@ -26,18 +27,18 @@ function printModelCars(listModelCars) {
                                             <img src="${car.autoImg}" alt="${car.modelo} Avatar">
                                         </td>
                                         <td class="brand-image">
-                                        <img src="${car.logoImg}" alt="${car.marca} Avatar">
+                                        <img src="${car.marca.imagoTipo}" alt="${car.marca.marca} Avatar">
                                         </td>
-                                        <td class="user-email">${car.modelo}</td>
-                                        <td class="user-location">${car.tipo}</td>
-                                        <td class="user-date">${formatDateOutput(car.anio)}</td>
-                                        <td class="user-location">${car.motor}</td>
-                                        <td class="user-location">${car.transmision}</td>
-                                        <td class="user-location">${car.combustible}</td>
-                                        <td class="user-location">${car.asientos}</td>
-                                        <td class="user-location">${car.precio_24h}</td>
-                                        
-                                        <td class="user-action">
+                                        <td class="modelCar-model">${car.modelo}</td>
+                                        <td class="modelCar-type">${car.tipo}</td>
+                                        <td class="modelCar-year">${formatDateOutput(car.anio)}</td>
+                                        <td class="modelCar-engine">${car.motor}</td>
+                                        <td class="modelCar-transmission">${car.transmision}</td>
+                                        <td class="modelCar-fuel">${car.combustible}</td>
+                                        <td class="modelCar-seating">${car.asientos}</td>
+                                        <td class="modelCar-precio24h">${car.precio_24h}</td>
+                                        <td class="modelCar-description">${car.descripcion}</td>
+                                        <td class="modelCar-action">
                                             <button class="action-btn btn-danger" 
                                                     title="Borrar usuario"
                                                     onclick="deleteModelCar('${car.id}', '${car.modelo}')">
@@ -143,18 +144,16 @@ modelCarsFormHTML.addEventListener("submit", (evt) => {
 
     const vehiculo = {
         id: id,
-        marca: el.marca.value,
+        marca: brandsArray[el.marca.value],
         modelo: el.modelo.value,
         motor: el.motor.value,
         anio: new Date(el.anio.value).getTime(),
         transmision: el.transmision.value, // Automático
         combustible: el.combustible.value, // Diesel
         tipo: el.tipo.value, // Convertible, Sedan, Eléctrico, Supercar, SUV, Ultra Luxury
-        sede: el.sede.value,
         asientos: el.asientos.value,
         precio_24h: el.precio_24h.value,
         active: el.active.checked,
-        logoImg: el.logoImg.value,
         autoImg: el.autoImg.value,
         descripcion: el.descripcion.value,
     };
@@ -223,18 +222,16 @@ function editModelCar(idSearch){
     const el = modelCarsFormHTML.elements;
 
     el.id.value = modelCarEdit.id;
-    el.marca.value = modelCarEdit.marca;
+    el.marca.value = (modelCarEdit.marca.id - 1);
     el.modelo.value = modelCarEdit.modelo;
     el.motor.value = modelCarEdit.motor;
     el.anio.value = formatDateInput(modelCarEdit.anio);
     el.transmision.value = modelCarEdit.transmision; // Automático
     el.combustible.value = modelCarEdit.combustible; // Diesel
     el.tipo.value = modelCarEdit.tipo; // Convertible, Sedan, Eléctrico, Supercar, SUV, Ultra Luxury
-    el.sede.value = modelCarEdit.sede;
     el.asientos.value = modelCarEdit.asientos;
     el.precio_24h.value = modelCarEdit.precio_24h;
     el.active.checked = modelCarEdit.active;
-    el.logoImg.value = modelCarEdit.logoImg;
     el.autoImg.value = modelCarEdit.autoImg;
     el.descripcion.value = modelCarEdit.descripcion;
 

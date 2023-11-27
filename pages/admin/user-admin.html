@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/adminGuard.js"></script>
   <title>SuperCar Club</title>
   <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/styles.css">
@@ -17,6 +18,7 @@
 </head>
 
 <body>
+
   <header class="main-header">
     <input class="input-check" type="checkbox" id="check-menu">
 
@@ -32,7 +34,7 @@
     </a>
 
     <nav class="main-nav">
-      <ul class="nav-list">
+      <ul id="header-nav" class="nav-list">
         <li class="nav-item">
           <a class="nav-link" href="/index.html">inicio</a>
         </li>
@@ -40,50 +42,37 @@
           <a class="nav-link" href="/pages/model-cars/model-cars.html">Modelos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/register/register.html">Registrarse</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/pages/login/login.html">Iniciar sesión</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/pages/admin/user-admin.html">Admin User</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/pages/admin/model-cars-admin.html">Admin Models</a>
-        </li>
       </ul>
     </nav>
 
     <div class="user-menu">
-
-      <button class="switch" id="switch">
-        <span>
-          <i class="fa-solid fa-sun"></i>
-        </span>
-        <span>
-          <i class="fa-solid fa-moon"></i>
-        </span>
-      </button>
-
-      <a class="find-link" href="#" title='Buscar modelo'>
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </a>
-      <a class="info-link" href="#" title='información'>
-        <i class="fa-solid fa-circle-info"></i>
-      </a>
-      <a class="shopping-link" href="#" title='Autos rentados'>
-        <i class="fa-solid fa-cart-shopping"></i>
-      </a>
-      <a class="user-link" href="#" title='Mi perfil'>
-        <div class="username-link">User Name</div>
-        <i class="fa-solid fa-user"></i>
-      </a>
+      <ul id="header-user" class="user-list">
+        <li class="switch-user-item">
+          <button class="switch" id="switch">
+            <span>
+              <i class="fa-solid fa-sun"></i>
+            </span>
+            <span>
+              <i class="fa-solid fa-moon"></i>
+            </span>
+          </button>
+        </li>
+        <li class="user-item">
+          <a class="user-link" href="/pages/login/login.html" title='Buscar modelo'>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </li>
+        <li class="user-item">
+          <a class="user-link" href="/pages/login/login.html" title='información'>
+            <i class="fa-solid fa-circle-info"></i>
+          </a>
+        </li>
+      </ul>
     </div>
   </header>
 
@@ -100,7 +89,10 @@
           </div>
           <div class="main-form">
 
-            <input type="hidden" name="id">
+            <!-- *ERROR: EL HIDDEN NO PERMITE RESET() EL FOMULARIO, POR LO QUE CAUSA ERROR POSTERIOR AL EDITAR -->
+            <!-- <input type="hidden" name="id"> -->
+            <!-- *SOLUCION: USAR DISPLAY NONE Y QUE SI REALICE EL RESET DEL FROM -->
+            <input name="id" style="display: none" type="text"/>
 
             <div class="flex-row">
               <div class="input-group">
@@ -247,6 +239,7 @@
     </div>
   </div>
 
+  <script src="/js/header.js" ></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="/js/formatDate.js"></script>
   <script src="/js/user-admin.js"></script>

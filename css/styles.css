@@ -31,6 +31,7 @@
     --text-message-color: hsla(0, 1%, 34%, 0.822);
     --icons-color: #000000;
     --input-color: #ffffff;
+    --input-disabled-color: #c9c9c9;
     --button-color: #151717;
     --scrollbar-track-color: #f2f2f2;
     --scrollbar-thumb-color: #323a4b;
@@ -65,6 +66,7 @@
         --text-message-color: hsla(0, 0%, 73%, 0.822);
         --icons-color: #ffffff;
         --input-color: rgb(40,45,58);
+        --input-disabled-color: rgb(26, 30, 41);
         --button-color: rgb(105,222,210);
         --scrollbar-track-color: #01080b;
         --scrollbar-thumb-color: #d4ff9d;
@@ -167,7 +169,6 @@ body {
     height: 0;
     overflow: hidden;
     transition: height .3s ease-in-out;
-
     background-color: var(--header-bg-color);
 }
 
@@ -186,52 +187,14 @@ body {
     }
 }
 
-.user-menu {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-
-    color:#000000;
-
-    & a {
-        color: var(--text-color);
-        text-decoration: none;
-        
-    }
-    .fa-solid{
-        font-size: 20px;
-    }
-
-    .user-link {
-        display: flex;
-        align-items: center;
-        gap: .3rem;
-        text-transform: uppercase;
-    }
-
-    .switch {
-        display: none;
-    }
-
-    .find-link {
-        display: none;
-    }
-
-    .username-link {
-        display: none;
-    }
-
-    .info-link {
-        display: none;
-    }
-
-}
-
 .nav-list {
     gap: .5rem;
     margin: .5rem 0rem;
     padding-right: 1rem;
+}
+
+.nav-item {
+    list-style: none;
 }
 
 .nav-item .nav-link {
@@ -253,6 +216,31 @@ body {
 .nav-item:not(:last-child) {
     border-bottom: 1px solid var(--border-color)
 }
+
+.profile-link {
+    padding-left: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: .1rem;
+    font-size: small;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+
+    .user-profile-picture {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-inline: .75rem .25rem;
+        pointer-events: none;
+    }
+}
+
 /*============================================================
 ======================= BURGER MENU END ======================
 =============================================================*/
@@ -312,8 +300,61 @@ body {
     background: none;
     color: #fff;
 }
+
 /*============================================================
 ========================== SWITCH END ========================
+=============================================================*/
+
+
+/*============================================================
+======================== USER INFO MENU ======================
+=============================================================*/
+.user-menu {
+    position: relative;
+    top: 0;
+    height: 100% !important;
+}
+
+.user-list {
+    display: flex;
+    gap: .5rem;
+    height: 100%;
+    margin: auto;
+    padding-right: 1rem;
+}
+
+.switch-user-item {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-item {
+    list-style: none;
+}
+
+.user-item .user-link{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 1.25rem 1rem;
+    width: 100%;
+    font-size: small;
+    text-decoration: none;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.user-item .user-link:hover {
+    background-color: var(--text-color);
+    color: var(--theme-bg-color);
+}
+
+/*============================================================
+====================== USER INFO MENU END ====================
 =============================================================*/
 
 
@@ -455,6 +496,7 @@ body {
 =============================================================*/
 
 
+
 /*============================================================
 ========================== RESPONSIVE ========================
 =============================================================*/
@@ -470,39 +512,34 @@ body {
         display: none;
     }
 
-    .main-nav {
+    .main-nav{
         position: relative;
         top: 0;
         height: 100% !important;
     }
-    .nav-list {
-        margin: auto;
-    }
 
-    .nav-item {
-        list-style: none;
+    .nav-list {
+        display: flex;
+        margin: auto;
+        height: 100%;
     }
 
     .nav-item:not(:last-child) {
         border-bottom: none;
     }
 
-    .nav-list {
-        height: 100%;
-    }
-
     .nav-item .nav-link {
         height: 100%;
         display: flex;
         align-items: center;
-        color: black;
         letter-spacing: 1px;
         font-size: small;
-
         color: var(--text-color)
     }
 
-    .nav-item .nav-link:hover {
+    .nav-item .nav-link:hover, 
+    .user-item .user-link:hover,
+    .user-item .profile-link:hover {
         background-color: transparent;
         color: var(--text-color);
 
@@ -529,23 +566,15 @@ body {
             display: flex;
         }
     
-        .find-link {
-            display: flex;
-        }
-
         .username-link {
             display: inline-block;
-            letter-spacing: 1px;
-            font-size: small;
         }
-    
-        .info-link {
+
+        .user-item .find-link, 
+        .user-item .info-link {
             display: flex;
         }
-    }
 
-    .nav-list {
-        display: flex
     }
 
     /*====================== MENU END ======================*/

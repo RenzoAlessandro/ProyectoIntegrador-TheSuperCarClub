@@ -257,6 +257,10 @@
     background-color: var(--input-color);
     font-family: var(--body-font);
     color: var(--text-color);
+
+    &:disabled{
+        background-color: var(--input-disabled-color);
+    }
 }
 
 

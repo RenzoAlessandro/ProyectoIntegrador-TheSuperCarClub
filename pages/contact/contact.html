@@ -32,7 +32,7 @@
     </a>
 
     <nav class="main-nav">
-      <ul class="nav-list">
+      <ul id="header-nav" class="nav-list">
         <li class="nav-item">
           <a class="nav-link" href="/index.html">inicio</a>
         </li>
@@ -40,52 +40,38 @@
           <a class="nav-link" href="/pages/model-cars/model-cars.html">Modelos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pages/register/register.html">Registrarse</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/pages/login/login.html">Iniciar sesión</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="/pages/about-us/about-us.html">Acerca de</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/pages/admin/user-admin.html">Admin User</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/pages/admin/model-cars-admin.html">Admin Models</a>
-        </li>
       </ul>
     </nav>
 
     <div class="user-menu">
-
-      <button class="switch" id="switch">
-        <span>
-          <i class="fa-solid fa-sun"></i>
-        </span>
-        <span>
-          <i class="fa-solid fa-moon"></i>
-        </span>
-      </button>
-
-      <a class="find-link" href="#" title='Buscar modelo'>
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </a>
-      <a class="info-link" href="#" title='información'>
-        <i class="fa-solid fa-circle-info"></i>
-      </a>
-      <a class="shopping-link" href="#" title='Autos rentados'>
-        <i class="fa-solid fa-cart-shopping"></i>
-      </a>
-      <a class="user-link" href="#" title='Mi perfil'>
-        <div class="username-link">User Name</div>
-        <i class="fa-solid fa-user"></i>
-      </a>
+      <ul id="header-user" class="user-list">
+        <li class="switch-user-item">
+          <button class="switch" id="switch">
+            <span>
+              <i class="fa-solid fa-sun"></i>
+            </span>
+            <span>
+              <i class="fa-solid fa-moon"></i>
+            </span>
+          </button>
+        </li>
+        <li class="user-item">
+          <a class="user-link" href="/pages/login/login.html" title='Buscar modelo'>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </li>
+        <li class="user-item">
+          <a class="user-link" href="/pages/login/login.html" title='información'>
+            <i class="fa-solid fa-circle-info"></i>
+          </a>
+        </li>
+      </ul>
     </div>
-
   </header>
 
   <main class="main-container main-contact">
@@ -95,52 +81,40 @@
         <div class="contact-wrapper">
           <h1 class="title-form contact-title">Contáctenos</h1>
           <p class="message">¡A nuestro amigable equipo le encantaría saber de usted!</p>
-          <form class="form contact-form ">
+          <form class="form contact-form">
 
             <div class="flex-row">
               <div class="input-group">
                 <label for="firstname">Nombres</label>
-                <input class="inputSimple" type="text" name="firstname" id="firstname"  
-                minlength="5" 
-                maxlength="80"
-                required>
+                <input class="inputSimple" type="text" name="firstname" id="firstname" minlength="5" maxlength="80"
+                  required>
               </div>
 
               <div class="input-group">
                 <label for="lastname">Apellidos</label>
-                <input class="inputSimple" type="text" name="lastname" id="lastname"  
-                minlength="5" 
-                maxlength="80"
-                required>
+                <input class="inputSimple" type="text" name="lastname" id="lastname" minlength="5" maxlength="80"
+                  required>
               </div>
             </div>
 
             <div class="flex-row">
               <div class="input-group">
                 <label for="email">Correo Electrónico</label>
-                <input class="inputSimple" type="email" name="email" id="email" 
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                minlength="5" 
-                maxlength="80"
-                required>
+                <input class="inputSimple" type="email" name="email" id="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="5" maxlength="80" required>
               </div>
-  
+
               <div class="input-group">
                 <label for="phone">Número de Teléfono</label>
-                <input class="inputSimple" type="tel" name="phone" id="phone" 
-                pattern="[0-9]{9}$" 
-                minlength="5" 
-                maxlength="80"
-                required>
+                <input class="inputSimple" type="tel" name="phone" id="phone" pattern="[0-9]{9}$" minlength="5"
+                  maxlength="80" required>
               </div>
             </div>
 
             <div class="input-group">
               <label for="message">Mensaje</label>
-              <textarea class="textareaSimple" name="message" id="message" rows="4"
-              minlength="10" 
-              maxlength="400"
-              required></textarea>
+              <textarea class="textareaSimple" name="message" id="message" rows="4" minlength="10" maxlength="400"
+                required></textarea>
             </div>
 
             <div class="input-group">
@@ -150,9 +124,12 @@
         </div>
       </div>
       <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30619.274011201785!2d-71.56059390680174!3d-16.404028777964832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a58865afa1b%3A0x54d07baf51532203!2sArequipa!5e0!3m2!1ses-419!2spe!4v1694399507581!5m2!1ses-419!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30619.274011201785!2d-71.56059390680174!3d-16.404028777964832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a58865afa1b%3A0x54d07baf51532203!2sArequipa!5e0!3m2!1ses-419!2spe!4v1694399507581!5m2!1ses-419!2spe"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-  </div>
+    </div>
 
 
   </main>
@@ -163,11 +140,7 @@
         <a class="footer-logo-link" href="">
           <img class="footer-logo" src="/assets/logo-TheSupercarClub.png" alt="logo-img">
         </a>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam nobis ea recusandae, repudiandae id quae
-          dignissimos, blanditiis dolore esse architecto rerum suscipit sapiente omnis ut vel ratione laudantium soluta
-          placeat quas. Porro perferendis totam, corporis expedita quaerat rerum earum nulla architecto, placeat quia
-          deleniti excepturi labore. Tenetur sint corporis, exercitationem sunt porro soluta error, adipisci deserunt,
-          in pariatur sed repellat!</p>
+        <p>Somos la empresa de alquiler de autos de ensueño número #1 en el Perú. Nuestro creciente inventario presenta algunos de los mejores automóviles que el dinero puede comprar. Somos una de las empresas más conocidas de coches de lujo atractivos porque somos propietarios de todo nuestro inventario, por lo que podemos asegurarnos de que su reserva sea perfecta en todo momento. Haremos de sus vacaciones en el Perú unas que nunca olvidará.</p>
         <div class="footer-icons">
           <a href="#"><i class="fa-brands fa-linkedin"></i></a>
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -264,6 +237,7 @@
   </div>
 
   <script src="/js/main.js"></script>
+  <script src="/js/header.js" ></script>
 </body>
 
 </html>

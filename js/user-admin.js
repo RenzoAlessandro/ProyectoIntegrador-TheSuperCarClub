@@ -32,7 +32,7 @@ function printUsers(listUsers){
                                         <td class="user-location">${user.location}</td>
                                         <td class="user-age">${user.age}</td>
                                         <td class="user-date">${formatDateOutput(user.bornDate)}</td>
-                                        <td class="user-age">${(user.role === `ADMIN_ROLE` ? "Administrador" : "Cliente")}</td>
+                                        <td class="user-role">${(user.role === `ADMIN_ROLE` ? "Administrador" : "Cliente")}</td>
                                         <td class="user-action">
                                             <button class="action-btn btn-danger" 
                                                     title="Borrar usuario"
@@ -69,7 +69,12 @@ searchInputUserHTML.addEventListener('keyup', (evento) =>{
 
 // *INFO: LIMPIAMOS EL FORMULARIO DE CERO
 function resetUserForm() {
+
+    // ERROR: El reset() no limpia inputs hidden (ID), 
+    // SOLUCION: pasarlo a display: none
+    // console.log(userFormHTML.elements.id.value)
     userFormHTML.reset();
+    // console.log(userFormHTML.elements.id.value)
 
     userFormHTML.elements.password.disabled = false;
     userFormHTML.elements.password2.disabled = false;
@@ -122,7 +127,11 @@ userFormHTML.addEventListener("submit", (evt) => {
 
     // Controlamos el repetir contraseña
     if(el.password.value !== el.password2.value){
-        alert(`Las constraseñas no coinciden.`)
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Las constraseñas no coinciden!",
+        });
         return;
     }
 

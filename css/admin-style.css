@@ -41,6 +41,18 @@
         background-color: var(--input-color);
         font-family: var(--body-font);
         color: var(--text-color);
+
+        .modelCar-description{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        & td {
+            height: 78px;
+            vertical-align: middle;
+        }
     }
     /* Esquina superior izquierda */
     & tr:first-child th:first-child {
