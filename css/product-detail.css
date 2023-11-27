@@ -1,0 +1,111 @@
+.container-wallpaper{
+    position: relative;
+    height: calc(100dvh - 86px);
+    background-color: #CED6E0;
+
+    .detail-modelCars-header {
+        position: absolute;
+        bottom: calc(5rem + 86px);
+        left: 5rem;
+        width: 50px;
+        height: 50px;
+
+        .detail-modelCars-brand-container{
+            position: absolute;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: .5rem;
+
+            .detail-modelCars-logo {
+                width: 150px;
+                height: 150px;
+                pointer-events: none;
+            }
+            .detail-modelCars-make{
+                width: 100%;
+                overflow: hidden;
+                font-size: 4rem;
+                font-family: var(--title-font);
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+                color: #2F3542;
+        }
+            .detail-modelCars-model {
+                width: 100%;
+                overflow: hidden;
+                font-size: 3rem;
+                font-family: var(--body-font);
+                font-weight: 600;
+                color: #2F3542;
+            }
+        }
+    }
+
+    .modelCar-text-background {
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        font-size: 20rem;
+        font-weight: 700;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgba(0,0,0,0.05);
+    }
+
+    .modelCar-img-body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: auto;
+        /* height: 80%; */
+        pointer-events: none;
+    }
+
+    .info-modelCar-footer{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: row;
+        margin: 0 0;
+        background-color: #2F3542;
+        color: #CED6E0;
+
+        .info-modelCar:last-child {
+            background-color: #ECCC68;
+            color: #2F3542;
+        }
+
+        .reservar-btn{
+            width: auto;
+            height: auto;
+            font-size: 12px;
+            text-decoration: none;
+            border: none;
+            font-weight: 500;
+            border-radius: 10px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background-color: transparent;
+            font-family: var(--body-font);
+            color: var(--text-color);
+        }
+    }
+    .info-modelCar-footer .info-modelCar {
+        padding: 2rem 4rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    
+        .fa-solid {
+            font-size: 1rem;
+            margin-bottom: .5rem;
+        }
+    }
+}

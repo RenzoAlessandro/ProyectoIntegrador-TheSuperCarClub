@@ -34,29 +34,6 @@
     height: 100%;
 }
 
-
-.input-wrapper {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    margin-bottom: .75rem;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    flex: 0 0 100%;
-    gap: 6px;
-}
-
-
-
-/* .contact-title {
-    text-align: center;
-    margin: 1rem;
-} */
-
 @media screen and (width > 1200px) {
     .section-contact {
         flex-direction: row;

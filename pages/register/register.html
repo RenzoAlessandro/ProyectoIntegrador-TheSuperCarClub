@@ -2,101 +2,168 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperCar Club</title>
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/forms-pages.css">
-    <link rel="stylesheet" href="/css/ui-elements.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SuperCar Club</title>
+  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/forms-pages.css">
+  <link rel="stylesheet" href="/css/ui-elements.css">
+  <link rel="stylesheet" href="/css/ui-basic.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-    <div class="main-container-forms">
+  <div class="main-container-forms">
 
-        <div class="container-img">
-            <picture>
-                <source class="porsche-wallpaper-img" srcset="/assets/Forms/porsche-forms-02.jpg" media="(width > 1200px)">
-                <img class="porsche-wallpaper-img" src="/assets/Forms/porsche-forms-01.jpg" alt="porsche">
-            </picture>
+    <div class="container-img">
+      <picture>
+        <source class="porsche-wallpaper-img" srcset="/assets/Forms/porsche-forms-02.jpg" media="(width > 1200px)">
+        <img class="porsche-wallpaper-img" src="/assets/Forms/porsche-forms-01.jpg" alt="porsche">
+      </picture>
 
-            <img class="wall-logo-img img-invert-color" src="/assets/logo-TheSupercarClub.png" alt="logo-img-1">
-        </div>
-
-
-        <form class="container-form" action="register">
-
-            <div class="box-form">
-
-                <div class="info-form">
-                    <h2 class="title-form">CREA UNA CUENTA</h2>
-                    <p class="message">Nunca guardamos la información de la tarjeta de crédito.</p>
-                    <p class="message">Registrarse hace que el pago sea rápido y fácil y guarda la información de su pedido en su cuenta.</p>
-                </div>
-
-                <div class="main-form">
-
-                    <label for="inputFirstName">Nombres*</label>
-                    <div class="inputIconForm">
-                        <i class="fa-solid fa-user"></i>
-                        <input class="inputIcon" type="text" name="nombreCompleto" id="inputFirstName" placeholder="John Doe" minlength="5" maxlength="50"
-                        pattern="^[a-zA-Z]+( [a-zA-Z]+)*$" autofocus required>
-                    </div>
-
-                    <label for="inputLastName">Apellidos*</label>
-                    <div class="inputIconForm">
-                        <i class="fa-solid fa-user"></i>
-                        <input class="inputIcon" type="text" name="nombreCompleto" id="inputLastName" placeholder="John Doe" minlength="5"
-                        maxlength="50" pattern="^[a-zA-Z]+( [a-zA-Z]+)*$" autofocus required>
-                    </div>
-                    
-                    <label for="inputEmail">Email*</label>
-                    <div class="inputIconForm">
-                        <i class="fa-solid fa-at"></i>
-                        <input class="inputIcon" type="email" name="correo" id="inputEmail" placeholder="user@example.com" minlength="7"
-                        maxlength="140" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$" autocomplete="on" required>
-                    </div>
-
-                    <label for="inputPwd">Contraseña*</label>
-                    <div class="inputIconForm">
-                        <i class="fa-solid fa-lock"></i>
-                        <input class="inputIcon" type="password" name="contraeña" id="inputPwd" placeholder="Ingresa tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        required>
-                    </div>
-
-                    <label for="inputConfirmPwd">Confirmar Contraseña*</label>
-                    <div class="inputIconForm">
-                        <i class="fa-solid fa-lock"></i>
-                        <input class="inputIcon" type="password" name="contraeña" id="inputConfirmPwd" placeholder="Reingresa tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        required>
-                    </div>
-
-                    <button class="buttonIcon" type="submit">
-                        Registrarse
-                        <i class="svgIcon fa-solid fa-right-to-bracket"></i>
-                    </button>
-
-                </div>
-
-                <!-- <p class="p">¿No tienes una cuenta? <a href="#">Regístrate ahora</a> -->
-
-                <div class="info-form">
-                    <small class="message">Al crear una cuenta, acepta nuestros <a href="#">Términos de uso</a> y <a
-                            href="#">Política de privacidad</a>.</small>
-                    <small class="message"><b>* CAMPOS REQUERIDOS</b></small>
-                </div>
-
-            </div>
-
-        </form>
-
-
+      <img class="wall-logo-img img-invert-color" src="/assets/logo-TheSupercarClub.png" alt="logo-img-1">
     </div>
 
+
+    <form id="register-form" class="container-form" action="register">
+
+      <div class="box-form">
+
+        <div class="info-form">
+          <h2 class="title-form">CREA UNA CUENTA</h2>
+          <p class="message">Nunca guardamos la información de la tarjeta de crédito.</p>
+          <p class="message">Registrarse hace que el pago sea rápido y fácil y guarda la información de su pedido en su
+            cuenta.</p>
+        </div>
+
+        <div class="main-form">
+
+          <div class="flex-row">
+            <div class="input-group">
+              <label for="inputFirstName">Nombres*</label>
+              <div class="inputIconForm">
+                <i class="fa-solid fa-user"></i>
+                <input class="inputIcon" type="text" name="firstName" id="inputFirstName" placeholder="John"
+                  minlength="5" maxlength="50" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+( [a-zA-ZñÑáéíóúÁÉÍÓÚ]+)*$" autofocus
+                  required>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="inputLastName">Apellidos*</label>
+              <div class="inputIconForm">
+                <i class="fa-solid fa-user"></i>
+                <input class="inputIcon" type="text" name="lastName" id="inputLastName" placeholder="Doe"
+                  minlength="5" maxlength="50" pattern="^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+( [a-zA-ZñÑáéíóúÁÉÍÓÚ]+)*$" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="inputEmail">Email*</label>
+            <div class="inputIconForm">
+              <i class="fa-solid fa-at"></i>
+              <input class="inputIcon" type="email" name="email" id="inputEmail" placeholder="user@example.com"
+                minlength="7" maxlength="140" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$" autocomplete="on"
+                required>
+            </div>
+          </div>
+
+          <div class="flex-row">
+            <div class="input-group">
+              <label for="inputPwd">Contraseña*</label>
+              <div class="inputIconForm">
+                <i class="fa-solid fa-lock"></i>
+                <input class="inputIcon" type="password" name="password" id="inputPwd"
+                  placeholder="Ingresa tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="inputConfirmPwd">Confirmar Contraseña*</label>
+              <div class="inputIconForm">
+                <i class="fa-solid fa-lock"></i>
+                <input class="inputIcon" type="password" name="password2" id="inputConfirmPwd"
+                  placeholder="Reingresa tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="inputLocation">Localidad*</label>
+            <div class="inputIconForm">
+              <i class="fa-solid fa-location-dot"></i>
+              <select class="inputIcon" name="location" id="inputLocation">
+                <option value="New York, NY">New York, NY</option>
+                <option value="Los Angeles, CA">Los Angeles, CA</option>
+                <option value="Miami, FL">Miami, FL</option>
+                <option value="Chicago, IL">Chicago, IL</option>
+                <option value="Houston, TX">Houston, TX</option>
+                <option value="San Francisco, CA">San Francisco, CA</option>
+                <option value="Boston, MA">Boston, MA</option>
+                <option value="Dallas, TX">Dallas, TX</option>
+                <option value="San Diego, CA">San Diego, CA</option>
+                <option value="Denver, CO">Denver, CO</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex-row">
+            <div class="input-group">
+              <label for="inputBornDate">Cumpleaños*</label>
+              <div class="inputIconForm">
+                <i class="fa-solid fa-calendar-days"></i>
+                <input class="inputIcon" type="date" name="bornDate" id="inputBornDate" required>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="inputAge">Edad*</label>
+              <div class="inputIconForm">
+                <i class="fa-solid fa-cake-candles"></i>
+                <input class="inputIcon" type="number" name="age" id="inputAge" min="1" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="inputProfileImg">Foto de Perfil (URL)*</label>
+            <div class="inputIconForm">
+              <i class="fa-solid fa-image"></i>
+              <input class="inputIcon" id="inputProfileImg" type="url" name="image"
+                value="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" required>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="inputUserActive" class="cyberpunk-checkbox-label">
+              <input class="cyberpunk-checkbox" type="checkbox" name="active" id="inputUserActive">
+              Usuario Activo</label>
+          </div>
+
+          <button class="buttonIcon" type="submit">
+            Registrarse
+            <i class="svgIcon fa-solid fa-right-to-bracket"></i>
+          </button>
+        </div>
+
+        <!-- <p class="p">¿No tienes una cuenta? <a href="#">Regístrate ahora</a> -->
+
+        <div class="info-form">
+          <small class="message">Al crear una cuenta, acepta nuestros <a href="#">Términos de uso</a> y <a
+              href="#">Política de privacidad</a>.</small>
+          <small class="message"><b>* CAMPOS REQUERIDOS</b></small>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/js/register.js"></script>
 </body>
 
 </html>

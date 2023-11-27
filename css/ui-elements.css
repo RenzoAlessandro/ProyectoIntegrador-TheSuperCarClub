@@ -191,13 +191,11 @@
     border-radius: 10px;
     outline: none;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-    box-shadow: 0px 0px 20px -18px;
 
-    border: 1.5px solid lightgrey;
+    border: 1.5px solid rgb(40, 45, 58);
     background-color: var(--input-color);
-
     font-family: var(--body-font);
-    color: rgb(0, 0, 0);
+    color: var(--text-color)
 }
 
 .textareaSimple {
@@ -206,7 +204,7 @@
 }
 
 .inputSimple:hover, .textareaSimple:hover, .selectSimple:hover{
-    border: 2px solid rgb(175, 175, 175);
+    border: 2px solid rgb(80, 88, 113);
     box-shadow: 0px 0px 20px -17px;
 }
 
@@ -214,9 +212,9 @@
     transform: scale(0.95);
 }
 
-.inputSimple:focus, .textareaSimple:focus, .selectSimple:focus{
-    border: 2px solid grey;
-}
+/* .inputSimple:focus, .textareaSimple:focus, .selectSimple:focus{
+    border: 2px solid rgb(192, 192, 192);
+} */
 /*============================================================
 ====================== INPUT SIMPLE END ======================
 =============================================================*/
@@ -225,6 +223,11 @@
 /*============================================================
 ========================= INPUT ICON =========================
 =============================================================*/
+.input-group {
+    flex-grow: 1;
+    margin-top: .4rem;
+}
+
 .inputIconForm {
     border-radius: 10px;
     height: 50px;
@@ -233,8 +236,13 @@
     padding-left: 10px;
     transition: 0.2s ease-in-out;
 
-    border: 1.5px solid #ecedec;
-    background-color: var(--input-color)
+    border: 1.5px solid rgb(40, 45, 58);
+    background-color: var(--input-color);
+
+    & select{
+        appearance: none;
+        cursor: pointer;
+    }
 }
 
 .inputIcon {
@@ -247,13 +255,17 @@
     outline: none;
 
     background-color: var(--input-color);
-
     font-family: var(--body-font);
-    color: var(--text-color)
+    color: var(--text-color);
+
+    &:disabled{
+        background-color: var(--input-disabled-color);
+    }
 }
 
+
 .inputIconForm:hover {
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(80, 88, 113);
     box-shadow: 0px 0px 20px -17px;
 }
 
@@ -261,9 +273,9 @@
     transform: scale(0.95);
 }
 
-.inputIconForm:focus {
+/* .inputIconForm:focus {
     border: 2px solid rgb(192, 192, 192);
-} 
+}  */
 /*============================================================
 ======================= INPUT ICON END =======================
 =============================================================*/
@@ -282,13 +294,13 @@
     width: 100%;
     cursor: pointer;
 
-    background-color: #151717;
-
-    font-family: var(--body-font);
-    color: aliceblue;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
+
+    background-color: var(--button-color);
+    font-family: var(--body-font);
+    color: var(--text-color-reverse);
 }
 /*============================================================
 ===================== BUTTON SIMPLE END ======================
@@ -350,4 +362,67 @@
 }
 /*============================================================
 ======================= BUTTON ICON END ======================
+=============================================================*/
+
+
+/*============================================================
+========================= BUTTON EDIT ========================
+=============================================================*/
+.btn-edit {
+    background-color:#ffd147;
+    color: black;
+    
+    &:hover {
+        background-color:#ffc107;
+    }
+}
+/*============================================================
+======================= BUTTON EDIT END ======================
+=============================================================*/
+
+
+/*============================================================
+===================== CYBERPUNK CHECKBOX =====================
+=============================================================*/
+.cyberpunk-checkbox {
+    appearance: none;
+    width: 30px;
+    height: 20px;
+    border: 2px solid var(--button-color);
+    border-radius: 5px;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.cyberpunk-checkbox:before {
+    content: "";
+    background-color: var(--button-color);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 20px;
+    height: 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cyberpunk-checkbox:checked:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.cyberpunk-checkbox-label {
+    margin-top: 1rem !important;
+    cursor: pointer;
+    user-select: none;
+    display: flex !important;
+    align-items: center;
+    justify-content: start;
+}
+/*============================================================
+=================== CYBERPUNK CHECKBOX END ===================
 =============================================================*/
