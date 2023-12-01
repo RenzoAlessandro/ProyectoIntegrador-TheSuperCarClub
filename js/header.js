@@ -32,7 +32,7 @@ if(loguedUser) {
 
     // Button de Mis autos Rentados
     const listItemmyRents = document.createElement('li');
-    listItemmyRents.classList.add('user-item');
+    listItemmyRents.classList.add('display-MyRents','user-item');
     const buttonMyRents = document.createElement('a');
     buttonMyRents.title = 'Mis autos rentados';
     buttonMyRents.classList.add('user-link');
@@ -45,7 +45,7 @@ if(loguedUser) {
 
     // Button de cerrar sesión
     const listItemLogout = document.createElement('li');
-    listItemLogout.classList.add('user-item');
+    listItemLogout.classList.add('display-Logout', 'user-item');
     const buttonLogout = document.createElement('a');
     buttonLogout.innerText = 'Cerrar sesión';
     buttonLogout.title = 'Cerrar sesión';
@@ -59,18 +59,18 @@ if(loguedUser) {
 
     // Asignamos el nombre del usuario logueado
     const listItemProfile = document.createElement('li');
-    listItemProfile.classList.add('user-item');
+    listItemProfile.classList.add('display-Profile', 'user-item');
     const buttonPerfil = document.createElement('a');
     buttonPerfil.title = 'Mi perfil';
-    buttonPerfil.href = '#';
+    buttonPerfil.href = '/pages/my-profile/my-profile.html';
     buttonPerfil.classList.add('profile-link');
     const userName = document.createElement('div');
-    userName.classList.add('username-link');
+    userName.classList.add('display-Profile-username','username-link');
     userName.innerText = `${loguedUser.firstName}`;
     const userImg = document.createElement('img');
     userImg.src = loguedUser.image;
     userImg.alt = `${loguedUser.firstName} profile picture`;
-    userImg.classList.add('user-profile-picture');
+    userImg.classList.add('display-Profile-img','user-profile-picture');
     buttonPerfil.appendChild(userName);
     buttonPerfil.appendChild(userImg);
     listItemProfile.appendChild(buttonPerfil);
@@ -80,11 +80,8 @@ if(loguedUser) {
     // *INFO: No tenemos un usuario logueado
     // Button de Iniciar sesión
 
-
-
     const listItemLogin = document.createElement('li');
-    listItemLogin.classList.add('user-item');
-
+    listItemLogin.classList.add('display-Login', 'user-item');
     const buttonLogin = document.createElement('a');
     buttonLogin.innerText = 'Iniciar sesión';
     buttonLogin.title = 'Iniciar sesión';

@@ -26,46 +26,120 @@ printBrandCard(brandsArray, SearchByBrandHTML);
 printtypeCarsCard(typeCarsArray, SearchByTypeCarsHTML);
 printTestimonialCard(testimonialsArray, RecentTestimonialsHTML);
 
+function hexToRGB(hex){
+    //  convertimos hex a rgb
+  // 3 digits
+  if (hex.length == 4) {
+    r = "0x" + hex[1] + hex[1];
+    g = "0x" + hex[2] + hex[2];
+    b = "0x" + hex[3] + hex[3];
+
+  // 6 digits
+  } else if (hex.length == 7) {
+    r = "0x" + hex[1] + hex[2];
+    g = "0x" + hex[3] + hex[4];
+    b = "0x" + hex[5] + hex[6];
+  }
+  
+  // Make r, g, and b fractions of 1
+  r /= 255;
+  g /= 255;
+  b /= 255;
+
+  // Find greatest and smallest channel values
+  let cmin = Math.min(r,g,b),
+  cmax = Math.max(r,g,b),
+  delta = cmax - cmin,
+  h = 0;
+
+  // Calculate hue
+  // No difference
+  if (delta == 0)
+    h = 0;
+  // Red is max
+  else if (cmax == r)
+    h = ((g - b) / delta) % 6;
+  // Green is max
+  else if (cmax == g)
+    h = (b - r) / delta + 2;
+  // Blue is max
+  else
+    h = (r - g) / delta + 4;
+
+  h = Math.round(h * 60);
+    
+  // Make negative hues positive behind 360°
+  if (h < 0){
+      h += 360;
+  }
+  return h;
+}
+
+function getPastelHigthColor(hex){
+  hue = hexToRGB(hex);
+  // Calculate lightness
+  l = 96;
+  // Calculate saturation
+  s = 100;
+  return "hsl(" + hue + "," + s + "%," + l + "%)";
+}
+
+function getPastelStrongColor(hex){
+  hue = hexToRGB(hex);
+  // Calculate lightness
+  l = 90;
+  // Calculate saturation
+  s = 100;
+  return "hsl(" + hue + "," + s + "%," + l + "%)";
+}
+
+function goProductDetail(id){
+  localStorage.setItem("currentModelCar", id);
+  window.location.href = '/pages/product-detail/product-detail.html';
+}
+
 function printFirstCard(listModelCars, containerHTML){
   containerHTML.innerHTML = '';
   listModelCars.forEach(car => {
     containerHTML.innerHTML += `
-                                <article class="card-cars-first">
-                                  <header class="card-first-header">
-                                    <div class="card-first-info">
-                                      <img class="card-first-logo" src="${car.marca.isoTipo}" alt="Logo ${car.logoImg}">
-                                      <div class="card-first-name">
-                                        <h2 class="card-first-make">${car.marca.marca}</h2>
-                                        <p class="card-first-model">${car.modelo}</p>
+                                <a onclick=goProductDetail(${car.id})>
+                                  <article class="card-cars-first">
+                                    <header style="background-color: ${getPastelHigthColor(car.color)};" class="card-first-header">
+                                      <div class="card-first-info">
+                                        <img class="card-first-logo" src="${car.marca.isoTipo}" alt="Logo ${car.logoImg}">
+                                        <div class="card-first-name">
+                                          <h2 class="card-first-make">${car.marca.marca}</h2>
+                                          <p class="card-first-model">${car.modelo}</p>
+                                        </div>
+                                      </div>
+                                      <img class="card-first-img" src="${car.autoImg}" alt="${car.modelo}">
+                                    </header>
+                                    <div style="background-color: ${getPastelStrongColor(car.color)};" class="card-first-body">
+                                      <div class="card-first-features">
+                                        <div class="card-first-seats">
+                                          <i class="fa-regular fa-user"></i>
+                                          <p>${car.asientos}</p>
+                                        </div>
+                                        <div class="card-first-transmission">
+                                          <i class="fa-solid fa-retweet"></i>
+                                          <p>${car.transmision}</p>
+                                        </div>
+                                        <div class="card-first-fuel">
+                                          <i class="fa-solid fa-droplet"></i>
+                                          <p>${car.combustible}</p>
+                                        </div>
+                                        <div class="card-first-type">
+                                          <i class="fa-solid fa-car-side"></i>
+                                          <p>${car.tipo.tipo}</p>
+                                        </div>
+                                      </div>
+                                      <div class="card-first-price">
+                                        <i class="text-price fa-solid fa-dollar-sign">${car.precio_24h}</i>
+                                        <p>/día</p>
                                       </div>
                                     </div>
-                                    <img class="card-first-img" src="${car.autoImg}" alt="${car.modelo}">
-                                  </header>
-                                  <div class="card-first-body">
-                                    <div class="card-first-features">
-                                      <div class="card-first-seats">
-                                        <i class="fa-regular fa-user"></i>
-                                        <p>${car.asientos}</p>
-                                      </div>
-                                      <div class="card-first-transmission">
-                                        <i class="fa-solid fa-retweet"></i>
-                                        <p>${car.transmision}</p>
-                                      </div>
-                                      <div class="card-first-fuel">
-                                        <i class="fa-solid fa-droplet"></i>
-                                        <p>${car.combustible}</p>
-                                      </div>
-                                      <div class="card-first-type">
-                                        <i class="fa-solid fa-car-side"></i>
-                                        <p>${car.tipo}</p>
-                                      </div>
-                                    </div>
-                                    <div class="card-first-price">
-                                      <i class="text-price fa-solid fa-dollar-sign">${car.precio_24h}</i>
-                                      <p>/día</p>
-                                    </div>
-                                  </div>
-                                </article>
+                                  </article>
+                                </a>
                                 `;
     
   });
@@ -103,7 +177,7 @@ function printSecondCard(listModelCars, containerHTML){
                                       </div>
                                       <div class="card-tag card-second-type">
                                         <i class="fa-solid fa-car-side"></i>
-                                        <p>${car.tipo}</p>
+                                        <p>${car.tipo.tipo}</p>
                                       </div>
                                     </div>
                                     <p class="card-second-description">${car.descripcion}</p>
@@ -116,8 +190,8 @@ function printSecondCard(listModelCars, containerHTML){
                                     </div>
                                   </div>
                                   <footer class="card-second-footer">
-                                    <a class="card-second-btn" href="/pages/product-detail/product-detail.html">Ver más</a>
-                                    <button class="card-second-btn" onclick="location.href='/pages/product-detail/product-detail.html'">Alquilar</button>
+                                    <a class="card-second-btn" onclick=goProductDetail(${car.id})>Ver más</a>
+                                    <button class="card-second-btn" onclick=goProductDetail(${car.id})>Alquilar</button>
                                   </footer>
                                 </article>
                                 `;

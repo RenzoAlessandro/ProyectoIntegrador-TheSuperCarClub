@@ -11,7 +11,7 @@ const typeCars = [
     },
     {
         id: 3,
-        tipo: 'Sedan | 4 Puertas',
+        tipo: 'Sedan',
         imagen: '/assets/Types/Type-Sedan-4-Door.jpg',
     },
     {
@@ -67,6 +67,14 @@ const brandsStart = [
     },
     {
         id: 4,
+        marca: 'Bentley',
+        sede: 'Reino Unido',
+        isoTipo: '/assets/Brands/isotipo-BMW.png',
+        logoTipo: '/assets/Brands/logotipo-BMW.png',
+        imagoTipo: '/assets/Brands/imagotipo-BMW.png',
+    },
+    {
+        id: 5,
         marca: 'BMW',
         sede: 'Alemania',
         isoTipo: '/assets/Brands/isotipo-BMW.png',
@@ -74,7 +82,7 @@ const brandsStart = [
         imagoTipo: '/assets/Brands/imagotipo-BMW.png',
     },
     {
-        id: 5,
+        id: 6,
         marca: 'Bugatti',
         sede: 'Francia',
         isoTipo: '/assets/Brands/isotipo-Bugatti.png',
@@ -82,7 +90,7 @@ const brandsStart = [
         imagoTipo: '/assets/Brands/imagotipo-Bugatti.png',
     },
     {
-        id: 6,
+        id: 7,
         marca: 'Ferrari',
         sede: 'Italia',
         isoTipo: '/assets/Brands/isotipo-Ferrari.png',
@@ -90,7 +98,7 @@ const brandsStart = [
         imagoTipo: '/assets/Brands/imagotipo-Ferrari.png',
     },
     {
-        id: 7,
+        id: 8,
         marca: 'Jaguar',
         sede: 'Reino Unido',
         isoTipo: '/assets/Brands/isotipo-Jaguar.png',
@@ -98,7 +106,7 @@ const brandsStart = [
         imagoTipo: '/assets/Brands/imagotipo-Jaguar.png',
     },
     {
-        id: 8,
+        id: 9,
         marca: 'Koenigsegg',
         sede: 'Suecia',
         isoTipo: '/assets/Brands/isotipo-Koenigsegg.png',
@@ -106,7 +114,7 @@ const brandsStart = [
         imagoTipo: '/assets/Brands/imagotipo-Koenigsegg.png',
     },
     {
-        id: 9,
+        id: 10,
         marca: 'Lamborghini',
         sede: 'Italia',
         isoTipo: '/assets/Brands/isotipo-Lamborghini.png',
@@ -114,7 +122,7 @@ const brandsStart = [
         imagoTipo: '/assets/Brands/imagotipo-Lamborghini.png',
     },
     {
-        id: 10,
+        id: 11,
         marca: 'Maserati',
         sede: 'Italia',
         isoTipo: '/assets/Brands/isotipo-Maserati.png',
@@ -122,7 +130,7 @@ const brandsStart = [
         imagoTipo: '/assets/Brands/imagotipo-Maserati.png',
     },
     {
-        id: 11,
+        id: 12,
         marca: 'McLaren',
         sede: 'Reino Unido',
         isoTipo: '/assets/Brands/isotipo-McLaren.png',
@@ -130,7 +138,7 @@ const brandsStart = [
         imagoTipo: '/assets/Brands/imagotipo-McLaren.png',
     },
     {
-        id: 12,
+        id: 13,
         marca: 'Mercedes Benz',
         sede: 'Alemania',
         isoTipo: '/assets/Brands/isotipo-Mercedes-Benz.png',
@@ -138,7 +146,7 @@ const brandsStart = [
         imagoTipo: '/assets/Brands/imagotipo-Mercedes-Benz.png',
     },
     {
-        id: 13,
+        id: 14,
         marca: 'Pagani',
         sede: 'Italia',
         isoTipo: '/assets/Brands/isotipo-Pagani.png',
@@ -146,9 +154,25 @@ const brandsStart = [
         imagoTipo: '/assets/Brands/imagotipo-Pagani.png',
     },
     {
-        id: 14,
+        id: 15,
         marca: 'Porsche',
         sede: 'Alemania',
+        isoTipo: '/assets/Brands/isotipo-Porsche.png',
+        logoTipo: '/assets/Brands/logotipo-Porsche.png',
+        imagoTipo: '/assets/Brands/imagotipo-Porsche.png',
+    },
+    {
+        id: 16,
+        marca: 'Rolls Royce',
+        sede: 'Reino Unido',
+        isoTipo: '/assets/Brands/isotipo-Porsche.png',
+        logoTipo: '/assets/Brands/logotipo-Porsche.png',
+        imagoTipo: '/assets/Brands/imagotipo-Porsche.png',
+    },
+    {
+        id: 17,
+        marca: 'Tesla',
+        sede: 'Estados Unidos',
         isoTipo: '/assets/Brands/isotipo-Porsche.png',
         logoTipo: '/assets/Brands/logotipo-Porsche.png',
         imagoTipo: '/assets/Brands/imagotipo-Porsche.png',
@@ -157,6 +181,43 @@ const brandsStart = [
 
 if(localStorage.getItem("brands") === null) {
     localStorage.setItem("brands", JSON.stringify(brandsStart));
+}
+
+const testimonialsStart = [
+    {
+        id: 1,
+        testimonio: 'Llamé a The SuperCar Club - Car Rental a las 9:00 a. m. para preguntar sobre la disponibilidad del auto de mis sueños y me entregaron el Lamborghini a las 11:00 a. m. del mismo día. La transacción fue simple y fluida.',
+        fecha: new Date('2023-06-09').getTime(),
+        autor: 'Shawn H.',
+    },
+    {
+        id: 2,
+        testimonio: 'The SuperCar Club es una empresa increíble. Tenían el Lamborghini exacto que necesitábamos y estaba en perfectas condiciones. La empresa es muy hospitalaria y el proceso es sencillo. Nos explicaron todo con el coche e hicieron un recorrido extenso.',
+        fecha: new Date('2022-09-14').getTime(),
+        autor: 'Eugene S.',
+    },
+    {
+        id: 3,
+        testimonio: 'The SuperCar Club hizo un esfuerzo adicional por nuestra empresa (nunca mejor dicho). Fueron muy serviciales y la comunicación fue eficiente. Utilizamos el magnífico Rolls Royce Dawn para nuestro vídeo musical con gran éxito.',
+        fecha: new Date('2022-03-04').getTime(),
+        autor: 'Gianna C.',
+    },
+    {
+        id: 4,
+        testimonio: 'Si buscas coches de calidad y un buen servicio, no te equivocarás aquí. El mejor servicio de alquiler de coches en Perú, sin duda. Tercera vez que alquilo desde aquí, nunca me decepcionó.',
+        fecha: new Date('2021-04-25').getTime(),
+        autor: 'Ryan M.',
+    },
+    {
+        id: 5,
+        testimonio: 'La asistencia que recibí fue excelente. Alquilé un Mercedes S550 Cabriolet para el baile de graduación de mi hija y fueron muy serviciales. ¡Se los recomendaría a todos y los usaré nuevamente en el futuro!',
+        fecha: new Date('2020-09-17').getTime(),
+        autor: 'Cathy J.',
+    },
+];
+
+if(localStorage.getItem("testimonials") === null){
+    localStorage.setItem("testimonials", JSON.stringify(testimonialsStart));
 }
 
 const usersStart = [
@@ -426,286 +487,269 @@ if(localStorage.getItem("users") === null) {
     localStorage.setItem("users", JSON.stringify(usersStart));
 }
 
+var precision = 10; // Un decimal
+
 const modelCarsStart = [
     // <option value="0">Alfa Romeo</option>
     {
         id: '1',
         marca: brandsStart[0],
         modelo: 'Giulia',
-        motor: '2.2 JTDM 160CV AT RWD',
-        anio: new Date('2023-01-01').getTime(),
-        transmision: 'Mecánico',
+        motor: '2.2L 160 CV',
+        tipo: typeCars[2],
+        transmision: 'Automático',
         combustible: 'Gasolina',
-        tipo: 'Sedan',
+        velocidadMax: 269,
+        horsepowerHP: 280,
+        de0a60MPH: 5.1,
+        anio: new Date('2020-01-02').getTime(),
+        color: '#ef233c',
         asientos: 4,
-        precio_24h: 856,
-        active: true,
+        ratingCount: Math.floor(Math.random() * (5 * precision - 0 * precision) + 0 * precision) / (1*precision),
+        precio_24h: 896,
         autoImg: '/assets/Cars/Alfa-Romeo/Alfaromeo-Giulia.png',
-        descripcion: 'Diseño italiano al más puro estilo Alfa Romeo. Nivel 2 de conducción autónoma. Equilibrio perfecto para una dinámica de conducción sin concesiones. Mejor sensación de la dirección, máximo confort'
+        descripcion: 'Tras someterse a una completa renovación en 2020, el Giulia ya estaba disponible en numerosas tonalidades para su carrocería y con un sistema de info-entretenimiento llamado Alfa Connect 3D que incluye pantalla de 8,8 pulgadas con navegador y datos del tráfico en tiempo real, así como lo último en conectividad para smartphones. Además, los servicios telemáticos Alfa Connected Services y sus múltiples asistentes a la conducción le valieron en día el nivel 2 de conducción autónoma.',
+        active: true,
     },
     {
         id: '2',
         marca: brandsStart[0],
         modelo: 'Stelvio',
-        motor: '2.2 JTDM 160CV AT RWD',
-        anio: new Date('2023-01-01').getTime(),
+        motor: '2.2L 160 CV',
+        tipo: typeCars[5],
         transmision: 'Automático',
         combustible: 'Gasolina',
-        tipo: 'SUV',
-        asientos: 5,
-        precio_24h: 931,
-        active: true,
+        velocidadMax: 283,
+        horsepowerHP: 280,
+        de0a60MPH: 3.6,
+        anio: new Date('2023-01-02').getTime(),
+        color: '#ef233c',
+        asientos: 4,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 978,
         autoImg: '/assets/Cars/Alfa-Romeo/Alfaromeo-Stelvio.png',
-        descripcion: 'El SUV, según Alfa Romeo. Nivel 2 de conducción autónoma. Equilibrio óptimo para una dinámica de conducción sin concesiones. Mejor sensación de la dirección, máximo confort'
+        descripcion: 'El Alfa Romeo Stelvio 2023 está disponible en ocho colores de carrocería: Rojo Alfa, Blanco Alfa, Negro Volcano, Perla Luna, Azul Misano, Gris Vesuvio, Rojo Etna y Gris Mate (solo en Competizione); tres tipos de llantas (de 17, 18 y 19 pulgadas) y seis niveles de acabado: Super, Sprint, Ti, Veloce, Competizione y desde este último semestre de 2023 también la famosa versión deportiva Alfa Romeo Stelvio Quadrifoglio, que además llega acompañada de una edición especial limitada Quadrifoglio 100º Anniversario limitada a solo 100 unidades -compartidas con el Giulia y ya totalmente agotadas- con detalles únicos en celebración de los 100 años del famoso trébol de cuatro hojas símbolo de la herencia deportiva de Alfa.',
+        active: true,
     },
     {
         id: '3',
         marca: brandsStart[0],
         modelo: 'Tonale',
-        motor: '1.6 130CV',
-        anio: new Date('2023-01-01').getTime(),
-        transmision: 'Automático',
-        combustible: 'Diesel',
-        tipo: 'SUV',
-        asientos: 5,
-        precio_24h: 931,
-        active: true,
-        autoImg: '/assets/Cars/Alfa-Romeo/Alfaromeo-Tonale.png',
-        descripcion: 'La tecnología NFT permite hacer un seguimiento del ciclo de vida del coche. Con los últimos sistemas avanzados de asistencia al conductor (ADAS). Equipado con tecnología brake-by-wire.'
-    },
-    // <option value="1">Aston Martin</option>
-    // <option value="2">Audi</option>
-    {
-        id: '4',
-        marca: brandsStart[2],
-        modelo: 'A6',
-        motor: '2.5 220CV',
-        anio: new Date('2023-01-01').getTime(),
+        motor: '1.5L 160 CV',
+        tipo: typeCars[5],
         transmision: 'Automático',
         combustible: 'Gasolina',
-        tipo: 'Sedan',
-        asientos: 5,
-        precio_24h: 931,
+        velocidadMax: 209,
+        horsepowerHP: 160,
+        de0a60MPH: 6.2,
+        anio: new Date('2021-01-02').getTime(),
+        color: '#ef233c',
+        asientos: 4,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 786,
+        autoImg: '/assets/Cars/Alfa-Romeo/Alfaromeo-Tonale.png',
+        descripcion: 'El diseño general no ha sufrido grandes variaciones respecto al del citado prototipo, pero sobre todo permanece invariable desde otoño de 2021, cuando conocimos el primer Tonale preserie. Conserva elementos como los bifaros, la calandra central o los pilotos led y el portón trasero liso. Los faros 3+3 son matriciales adaptativos Full-LED y están desarrollados con la colaboración de Marelli.',
         active: true,
-        autoImg: '/assets/Cars/Audi/Audi-A6.png',
-        descripcion: 'Desde el Audi Singleframe ensanchado y las entradas de aire laterales con molduras cromadas deportivas hasta los estrechos faros delanteros, el frontal de Audi A6 Sedán es totalmente progresivo. La línea de cintura más marcada con las fuertes curvas sobre los pasos de rueda enfatiza la arquitectura quattro. Los espejos exteriores se ubican sobre los rieles de las puertas para dar una apariencia más deportiva.'
+    },
+    // <option value="1">Aston Martin</option>
+    {
+        id: '4',
+        marca: brandsStart[1],
+        modelo: 'DB11',
+        motor: '4.0L 510 CV',
+        tipo: typeCars[0],
+        transmision: 'Automático',
+        combustible: 'Gasolina',
+        velocidadMax: 322 ,
+        horsepowerHP: 528,
+        de0a60MPH: 3.9,
+        anio: new Date('2023-01-02').getTime(),
+        color: '#dee2e6',
+        asientos: 4,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 768,
+        autoImg: '/assets/Cars/Aston-Martin/AstonMartin-DB11.png',
+        descripcion: 'El Aston Martin DB11 es el modelo medio de Aston Martin, un Gran Turismo de altas prestaciones, heredero del mítico Aston Martin DB9 que tantas alegrías le dio al fabricante británico. Se comercializa su primera generación, la cual salió al mercado en 2016. Comparte chasis con el Aston Martin DBS Superleggera, una versión más deportiva y exclusiva que emplea gran parte de los elementos de carrocería y otros componentes base. Se fabrica artesanalmente en la factoría de Gaydon, Inglaterra, al igual que el Vanquish, Rapide y el Vantage.',
+        active: true,
     },
     {
         id: '5',
-        marca: brandsStart[2],
-        modelo: 'Q8 Sportback e-tron',
-        motor: '2.5 220CV',
-        anio: new Date('2023-01-01').getTime(),
+        marca: brandsStart[1],
+        modelo: 'DBS Superleggera',
+        motor: '5.2L 725 CV',
+        tipo: typeCars[0],
         transmision: 'Automático',
         combustible: 'Gasolina',
-        tipo: 'Eléctrico',
-        asientos: 5,
-        precio_24h: 931,
+        velocidadMax: 340,
+        horsepowerHP: 715,
+        de0a60MPH: 1.7,
+        anio: new Date('2018-01-02').getTime(),
+        color: '#dee2e6',
+        asientos: 2,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 865,
+        autoImg: '/assets/Cars/Aston-Martin/AstonMartin-DBS-SuperLeggera.png',
+        descripcion: 'El Aston Martin DBS Superleggera es un superdeportivo lanzado en 2018 que en esencia es la versión más deportiva y exclusiva desarrollada sobre la base del Aston Martin DB11. A pesar de compartir con el DB11 chasis, elementos mecánicos y otros componentes, el DBS Superleggera ofrece una visión más deportiva y radical para distanciarse del carácter GT del Aston Martin DB11.',
         active: true,
-        autoImg: '/assets/Cars/Audi/Audi-Q8-Sportback-e-tron.png',
-        descripcion: 'Audi e-tron ha cumplido su papel pionero como el primer vehículo totalmente eléctrico. Ahora ha llegado el momento de incluirlo por su nombre en el portafolio de modelos Audi, como el Audi Q8 e-tron Sportback.'
     },
     {
         id: '6',
-        marca: brandsStart[2],
-        modelo: 'RS e-tron GT',
-        motor: '2.5 220CV',
-        anio: new Date('2023-01-01').getTime(),
+        marca: brandsStart[1],
+        modelo: 'DBX',
+        motor: '4.0L 550 CV',
+        tipo: typeCars[5],
         transmision: 'Automático',
         combustible: 'Gasolina',
-        tipo: 'Eléctrico',
-        asientos: 5,
-        precio_24h: 931,
+        velocidadMax: 310,
+        horsepowerHP: 542,
+        de0a60MPH: 3.3,
+        anio: new Date('2020-01-02').getTime(),
+        color: '#06d6a0',
+        asientos: 2,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 987,
+        autoImg: '/assets/Cars/Aston-Martin/AstonMartin-DBX.png',
+        descripcion: 'El Aston Martin DBX es un SUV deportivo y de lujo, comercializado por Aston Martin desde 2020. El Aston Martin DBX se caracteriza por ofrecer la deportividad a la que nos tiene acostumbrados Aston Martin, en equilibrio con el alto nivel de calidad y confort de que siempre han hecho gala sus grandes turismos.',
         active: true,
-        autoImg: '/assets/Cars/Audi/Audi-RS-E-tron-GT.png',
-        descripcion: 'La batería de iones de litio de 800 voltios integrada de forma plana ofrece un rendimiento extremadamente alto, tanto en la carga como durante la conducción. En combinación con el sistema de recuperación, se ha calculado una autonomía de hasta 472 km según el procedimiento de medición WLTP; Emisiones de CO₂ combinadas¹: 0 g/km (WLTP). Solo están disponibles para el vehículo los valores de consumo y emisiones según WLTP y no según NEDC).'
     },
-    // <option value="3">BMW</option>
     {
         id: '7',
-        marca: brandsStart[3],
-        modelo: 'i4',
-        motor: '3.5 387hp',
-        anio: new Date('2023-01-01').getTime(),
+        marca: brandsStart[1],
+        modelo: 'Valhalla',
+        motor: 'V6 Twin-Turbo 1.000 CV',
+        tipo: typeCars[4],
         transmision: 'Automático',
         combustible: 'Gasolina',
-        tipo: 'Eléctrico',
-        asientos: 5,
-        precio_24h: 931,
+        velocidadMax: 330,
+        horsepowerHP: 950,
+        de0a60MPH: 2.5,
+        anio: new Date('2021-01-02').getTime(),
+        color: '#006d77',
+        asientos: 2,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 765,
+        autoImg: '/assets/Cars/Aston-Martin/AstonMartin-Valhalla.png',
+        descripcion: 'El Aston Martin Valhalla es un superdeportivo híbrido enchufable de motor V6 central fabricado por Aston Martin y que rinde 1.000 CV de potencia máxima. Se trata de un coche conocido incialmente como proyecto AM-RB 003 dado su desarrollo en colaboración con Red Bull. La filosofía de este coche es la de ofrecer un planteamiento muy similar al del Aston Martin Valkyrie, pero a una escala inferior en tamaño, prestaciones y precio.',
         active: true,
-        autoImg: '/assets/Cars/BMW/BMW-i4.webp',
-        descripcion: 'Como primer vehículo totalmente eléctrico, el Gran Coupé aúna el extraordinario dinamismo de BMW i4 con un elevado confort y una óptima aptitud para la vida diaria. Equipado con la tecnología BMW eDrive de quinta generación, el 5 puertas ofrece unos valores de potencia de hasta 400 kW/544 CV (BMW i4 M50). Su elevada autonomía de hasta 591 kilómetros* (BMW i4 eDrive40) y la oferta de cinco plazas completas lo hacen ideal para cualquier trayecto.'
     },
     {
         id: '8',
-        marca: brandsStart[3],
-        modelo: 'X2',
-        motor: '3.5 387hp',
-        anio: new Date('2023-01-01').getTime(),
+        marca: brandsStart[1],
+        modelo: 'Vanquish',
+        motor: 'V12 520 CV',
+        tipo: typeCars[0],
         transmision: 'Automático',
         combustible: 'Gasolina',
-        tipo: 'Eléctrico',
-        asientos: 5,
-        precio_24h: 931,
+        velocidadMax: 295,
+        horsepowerHP: 513,
+        de0a60MPH: 4.1,
+        anio: new Date('2021-01-02').getTime(),
+        color: '#d90429',
+        asientos: 2,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 768,
+        autoImg: '/assets/Cars/Aston-Martin/AstonMartin-Vanquish.png',
+        descripcion: 'El Aston Martin Vanquish S es la máxima expresión en cuanto a vehículos GT del fabricante inglés. El Vanquish es un modelo con gran tradición dentro de la marca, y su última evolución no deja lugar a dudas: se trata de todo un Aston Martin. Su diseño no pasa desapercibido, pero mantiene la elegancia inherente a todo vehículo de la firma británica.',
         active: true,
-        autoImg: '/assets/Cars/BMW/BMW-X2.webp',
-        descripcion: 'Absolutamente único y extraordinario. El BMW X2 es un modelo deportivo y atlético que ofrece unas prestaciones dinámicas y ágiles insuperables en esta categoría. Con un interior exclusivo y tecnologías innovadoras, es el protagonista de una nueva época. ¿Estás preparado?.'
     },
     {
         id: '9',
-        marca: brandsStart[3],
-        modelo: 'Z4 M40i',
-        motor: '3.5 387hp',
-        anio: new Date('2023-01-01').getTime(),
+        marca: brandsStart[1],
+        modelo: 'Vantage',
+        motor: '4.0L V8 Biturbo 510 CV',
+        tipo: typeCars[0],
         transmision: 'Automático',
         combustible: 'Gasolina',
-        tipo: 'Convertible',
-        asientos: 5,
-        precio_24h: 931,
+        velocidadMax: 314,
+        horsepowerHP: 528,
+        de0a60MPH: 3.5,
+        anio: new Date('2021-01-02').getTime(),
+        color: '#eeef20',
+        asientos: 2,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 876,
+        autoImg: '/assets/Cars/Aston-Martin/AstonMartin-Vantage.png',
+        descripcion: 'El Aston Martin Vantage es un deportivo biplaza del fabricante británico Aston Martin, comercializado desde 2005. Actualmente se fabrica la segunda generación, presentada en 2017. El Aston Martin Vantage se caracteriza por ser el hermano pequeño del Aston Martin DB11 y presume de un reparto de pesos perfecto, un chasis ligero y un motor V8 Biturbo de origen Mercedes-AMG de 510 CV. Se fabrica en la planta de Aston Martin en Gaydon, Reino Unido.',
         active: true,
-        autoImg: '/assets/Cars/BMW/BMW-Z4-M40i.webp',
-        descripcion: 'Abierto, plano y orientado al alto desempeño. Con su frontal amplio, llantas grandes, capó alargado y numerosos detalles inspirados en el mundo de la competición, el BMW Z4 M40i acelera el pulso ya a primera vista. Este Roadster de alto rendimiento despliega su carácter deportivo en todos los sentidos, entusiasma con su agilidad y garantiza el puro placer de conducir.'
     },
-    // <option value="4">Bugatti</option>
+    // <option value="2">Audi</option>
     {
         id: '10',
-        marca: brandsStart[4],
-        modelo: 'Chiron',
-        motor: 'W16 de 8 litros 1500 CV',
-        anio: new Date('2016-01-01').getTime(),
+        marca: brandsStart[2],
+        modelo: 'A6',
+        motor: '2.0L 204 CV',
+        tipo: typeCars[2],
         transmision: 'Automático',
         combustible: 'Gasolina',
-        tipo: 'Supercar',
-        asientos: 5,
-        precio_24h: 931,
+        velocidadMax: 230,
+        horsepowerHP: 335,
+        de0a60MPH: 4.8,
+        anio: new Date('2021-01-02').getTime(),
+        color: '#ced4da',
+        asientos: 4,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 987,
+        autoImg: '/assets/Cars/Audi/Audi-A6.png',
+        descripcion: 'El Audi A6 es una berlina premium, del segmento E, fabricada por la marca Audi desde 1995. Se trata del sucesor del Audi 100. Actualmente se comercializa la tercera generación, presentada en 2018. El Audi A6 se caracteriza por sus casi 5 metros de longitud, es un coche de estética muy clásica pero tecnología de última generación, que está construido con el máximo cuidado en la calidad de cada detalle.',
         active: true,
-        autoImg: '/assets/Cars/Bugatti/Bugatti-Chiron.png',
-        descripcion: 'El Bugatti Chiron es un hiperdeportivo de Bugatti, que reemplazó al Bugatti Veyron en 2016. El Bugatti Chiron se caracteriza por ser el vehículo más rápido del mundo, siendo capaz de sobrepasar los 490 kilómetros por hora.'
     },
-    // <option value="5">Ferrari</option>
     {
         id: '11',
-        marca: brandsStart[5],
-        modelo: '812 Superfast',
-        motor: '6.5 V12 799CV',
-        anio: new Date('2016-01-01').getTime(),
+        marca: brandsStart[2],
+        modelo: 'Q8 Sportback e-tron',
+        motor: 'Eléctrico',
+        tipo: typeCars[3],
         transmision: 'Automático',
-        combustible: 'Gasolina',
-        tipo: 'Deportivo',
-        asientos: 5,
-        precio_24h: 931,
+        combustible: 'Eléctrico',
+        velocidadMax: 250,
+        horsepowerHP: 335,
+        de0a60MPH: 6.0,
+        anio: new Date('2021-01-02').getTime(),
+        color: '#edf2f4',
+        asientos: 4,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 998,
+        autoImg: '/assets/Cars/Audi/Audi-Q8-Sportback-e-tron.png',
+        descripcion: 'El Audi Q8 es un SUV coupé, del segmento E, fabricado por Audi desde 2018. Actualmente se comercializa la primera generación. El Audi Q8 destaca por ofrecer una visión más deportiva y exclusiva del todocamino según Audi. Se fabrica en la planta de Audi en Bratislava, Eslovaquia.',
         active: true,
-        autoImg: '/assets/Cars/Ferrari/Ferrari-812.png',
-        descripcion: 'El primer desafío, el más difícil, al que se enfrentó Ferrari cuando se centró en el desarrollo del nuevo Ferrari 812 Superfast era superar los límites que imponen sus propios logros. Este desafío se hace aún más complicado cuando la tarea entre manos implica el diseño de un nuevo motor de doce cilindros, la motorización que marcó el inicio de la historia del Cavallino Rampante en 1947.'
     },
     {
         id: '12',
-        marca: brandsStart[5],
-        modelo: 'Roma',
-        motor: 'V8 620CV',
-        anio: new Date('2016-01-01').getTime(),
+        marca: brandsStart[2],
+        modelo: 'RS e-tron GT',
+        motor: 'Eléctrico',
+        tipo: typeCars[3],
         transmision: 'Automático',
-        combustible: 'Gasolina',
-        tipo: 'Deportivo',
-        asientos: 5,
-        precio_24h: 931,
+        combustible: 'Eléctrico',
+        velocidadMax: 250,
+        horsepowerHP: 522,
+        de0a60MPH: 3.3,
+        anio: new Date('2021-01-02').getTime(),
+        color: '#edf2f4',
+        asientos: 4,
+        ratingCount: Math.random() * (5 - 0) + 0,
+        precio_24h: 667,
+        autoImg: '/assets/Cars/Audi/Audi-Q8-Sportback-e-tron.png',
+        descripcion: 'El Audi Q8 es un SUV coupé, del segmento E, fabricado por Audi desde 2018. Actualmente se comercializa la primera generación. El Audi Q8 destaca por ofrecer una visión más deportiva y exclusiva del todocamino según Audi. Se fabrica en la planta de Audi en Bratislava, Eslovaquia.',
         active: true,
-        autoImg: '/assets/Cars/Ferrari/Ferrari-Roma.png',
-        descripcion: 'El Ferrari Roma es el último coupé de la marca italiana, un modelo de elegante diseño inspirado en los años 60, con capacidad para cuatro ocupantes y con un motor V8 biturbo de 3,8 litros que desarrolla 620 CV de potencia.'
     },
-    // <option value="6">Jaguar</option>
-    // <option value="7">Koenigsegg</option>
-    // <option value="8">Lamborghini</option>
-    // <option value="9">Maserati</option>
-    // <option value="10">McLaren</option>
-    // <option value="11">Mercedes Benz</option>
-    // <option value="12">Pagani</option>
-    // <option value="13">Porsche</option>
-    {
-        id: '13',
-        marca: brandsStart[13],
-        modelo: '718 Cayman GT4 RS',
-        motor: 'V8 620CV',
-        anio: new Date('2016-01-01').getTime(),
-        transmision: 'Automático',
-        combustible: 'Gasolina',
-        tipo: 'Deportivo',
-        asientos: 5,
-        precio_24h: 931,
-        active: true,
-        autoImg: '/assets/Cars/Porsche/porsche-718-cayman-gt4-rs.webp',
-        descripcion: 'El Ferrari Roma es el último coupé de la marca italiana, un modelo de elegante diseño inspirado en los años 60, con capacidad para cuatro ocupantes y con un motor V8 biturbo de 3,8 litros que desarrolla 620 CV de potencia.'
-    },
-    {
-        id: '14',
-        marca: brandsStart[13],
-        modelo: '718 Cayman GT4',
-        motor: 'V8 620CV',
-        anio: new Date('2016-01-01').getTime(),
-        transmision: 'Automático',
-        combustible: 'Gasolina',
-        tipo: 'Deportivo',
-        asientos: 5,
-        precio_24h: 931,
-        active: true,
-        autoImg: '/assets/Cars/Porsche/porsche-718-cayman-gt4.webp',
-        descripcion: 'El Ferrari Roma es el último coupé de la marca italiana, un modelo de elegante diseño inspirado en los años 60, con capacidad para cuatro ocupantes y con un motor V8 biturbo de 3,8 litros que desarrolla 620 CV de potencia.'
-    },
-    {
-        id: '15',
-        marca: brandsStart[13],
-        modelo: '911 Turbo Cabriolet',
-        motor: 'V8 620CV',
-        anio: new Date('2016-01-01').getTime(),
-        transmision: 'Automático',
-        combustible: 'Gasolina',
-        tipo: 'Deportivo',
-        asientos: 5,
-        precio_24h: 931,
-        active: true,
-        autoImg: '/assets/Cars/Porsche/porsche-911-turbo-cabriolet.webp',
-        descripcion: 'El Ferrari Roma es el último coupé de la marca italiana, un modelo de elegante diseño inspirado en los años 60, con capacidad para cuatro ocupantes y con un motor V8 biturbo de 3,8 litros que desarrolla 620 CV de potencia.'
-    },
+    // <option value="3">Bentley</option>
+    // <option value="4">BMW</option>
+    // <option value="5">Bugatti</option>
+    // <option value="6">Ferrari</option>
+    // <option value="7">Jaguar</option>
+    // <option value="8">Koenigsegg</option>
+    // <option value="9">Lamborghini</option>
+    // <option value="10">Maserati</option>
+    // <option value="11">McLaren</option>
+    // <option value="12">Mercedes Benz</option>
+    // <option value="13">Pagani</option>
+    // <option value="14">Porsche</option>
+    // <option value="15">Rolls Royce</option>
+    // <option value="16">Tesla</option>
 ];
 
 if(localStorage.getItem("modelCars") === null){
     console.log(modelCarsStart);
     localStorage.setItem("modelCars", JSON.stringify(modelCarsStart));
-}
-
-const testimonialsStart = [
-    {
-        id: 1,
-        testimonio: 'Llamé a The SuperCar Club - Car Rental a las 9:00 a. m. para preguntar sobre la disponibilidad del auto de mis sueños y me entregaron el Lamborghini a las 11:00 a. m. del mismo día. La transacción fue simple y fluida.',
-        fecha: new Date('2023-06-09').getTime(),
-        autor: 'Shawn H.',
-    },
-    {
-        id: 2,
-        testimonio: 'The SuperCar Club es una empresa increíble. Tenían el Lamborghini exacto que necesitábamos y estaba en perfectas condiciones. La empresa es muy hospitalaria y el proceso es sencillo. Nos explicaron todo con el coche e hicieron un recorrido extenso.',
-        fecha: new Date('2022-09-14').getTime(),
-        autor: 'Eugene S.',
-    },
-    {
-        id: 3,
-        testimonio: 'The SuperCar Club hizo un esfuerzo adicional por nuestra empresa (nunca mejor dicho). Fueron muy serviciales y la comunicación fue eficiente. Utilizamos el magnífico Rolls Royce Dawn para nuestro vídeo musical con gran éxito.',
-        fecha: new Date('2022-03-04').getTime(),
-        autor: 'Gianna C.',
-    },
-    {
-        id: 4,
-        testimonio: 'Si buscas coches de calidad y un buen servicio, no te equivocarás aquí. El mejor servicio de alquiler de coches en Perú, sin duda. Tercera vez que alquilo desde aquí, nunca me decepcionó.',
-        fecha: new Date('2021-04-25').getTime(),
-        autor: 'Ryan M.',
-    },
-    {
-        id: 5,
-        testimonio: 'La asistencia que recibí fue excelente. Alquilé un Mercedes S550 Cabriolet para el baile de graduación de mi hija y fueron muy serviciales. ¡Se los recomendaría a todos y los usaré nuevamente en el futuro!',
-        fecha: new Date('2020-09-17').getTime(),
-        autor: 'Cathy J.',
-    },
-];
-
-if(localStorage.getItem("testimonials") === null){
-    localStorage.setItem("testimonials", JSON.stringify(testimonialsStart));
 }

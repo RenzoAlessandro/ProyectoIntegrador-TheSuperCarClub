@@ -198,7 +198,7 @@ body {
 }
 
 .nav-item .nav-link {
-    padding: 1.25rem 1rem;
+    padding: 1.25rem .8rem;
     display: inline-block;
     width: 100%;
     text-decoration: none;
@@ -218,7 +218,7 @@ body {
 }
 
 .profile-link {
-    padding-left: 1.25rem;
+    padding-left: .5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -331,6 +331,7 @@ body {
 }
 
 .user-item {
+    /* display: none; */
     list-style: none;
 }
 
@@ -338,7 +339,7 @@ body {
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 1.25rem 1rem;
+    padding: 1.25rem .5rem;
     width: 100%;
     font-size: small;
     text-decoration: none;
@@ -351,6 +352,15 @@ body {
 .user-item .user-link:hover {
     background-color: var(--text-color);
     color: var(--theme-bg-color);
+}
+
+.display-switch,
+.display-search,
+.display-info,
+.display-MyRents,
+.display-Logout,
+.display-Profile-username {
+    display: none;
 }
 
 /*============================================================
@@ -472,6 +482,12 @@ body {
     text-align: center;
     color: var(--text-color-white);
 }
+
+.footer-copyright-ligth{
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-color-white);
+}
 /*============================================================
 ========================== FOOTER END ========================
 =============================================================*/
@@ -537,6 +553,10 @@ body {
         color: var(--text-color)
     }
 
+    /* .user-item {
+        display:inline-block;
+    } */
+
     .nav-item .nav-link:hover, 
     .user-item .user-link:hover,
     .user-item .profile-link:hover {
@@ -562,17 +582,16 @@ body {
     .user-menu {
         margin-left: auto;
 
-        .switch {
+        .display-switch{
             display: flex;
-        }
-    
-        .username-link {
-            display: inline-block;
         }
 
-        .user-item .find-link, 
-        .user-item .info-link {
-            display: flex;
+        .display-search,
+        .display-info,
+        .display-MyRents,
+        .display-Logout,
+        .display-Profile-username {
+            display: inline-block;
         }
 
     }

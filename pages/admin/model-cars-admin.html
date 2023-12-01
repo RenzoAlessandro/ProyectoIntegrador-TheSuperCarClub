@@ -52,7 +52,7 @@
 
     <div class="user-menu">
       <ul id="header-user" class="user-list">
-        <li class="switch-user-item">
+        <li class="display-switch switch-user-item">
           <button class="switch" id="switch">
             <span>
               <i class="fa-solid fa-sun"></i>
@@ -62,12 +62,12 @@
             </span>
           </button>
         </li>
-        <li class="user-item">
+        <li class="display-search user-item">
           <a class="user-link" href="/pages/login/login.html" title='Buscar modelo'>
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
         </li>
-        <li class="user-item">
+        <li class="display-info user-item">
           <a class="user-link" href="/pages/login/login.html" title='información'>
             <i class="fa-solid fa-circle-info"></i>
           </a>
@@ -103,17 +103,20 @@
                     <option value="0">Alfa Romeo</option>
                     <option value="1">Aston Martin</option>
                     <option value="2">Audi</option>
-                    <option value="3">BMW</option>
-                    <option value="4">Bugatti</option>
-                    <option value="5">Ferrari</option>
-                    <option value="6">Jaguar</option>
-                    <option value="7">Koenigsegg</option>
-                    <option value="8">Lamborghini</option>
-                    <option value="9">Maserati</option>
-                    <option value="10">McLaren</option>
-                    <option value="11">Mercedes Benz</option>
-                    <option value="12">Pagani</option>
-                    <option value="13">Porsche</option>
+                    <option value="3">Bentley</option>
+                    <option value="4">BMW</option>
+                    <option value="5">Bugatti</option>
+                    <option value="6">Ferrari</option>
+                    <option value="7">Jaguar</option>
+                    <option value="8">Koenigsegg</option>
+                    <option value="9">Lamborghini</option>
+                    <option value="10">Maserati</option>
+                    <option value="11">McLaren</option>
+                    <option value="12">Mercedes Benz</option>
+                    <option value="13">Pagani</option>
+                    <option value="14">Porsche</option>
+                    <option value="15">Rolls Royce</option>
+                    <option value="16">Tesla</option>
                   </select>
                 </div>
               </div>
@@ -122,7 +125,7 @@
                 <label for="inputModel">Modelo*</label>
                 <div class="inputIconForm">
                   <i class="fa-solid fa-car"></i>
-                  <input class="inputIcon" type="text" name="modelo" id="inputModel" placeholder="Giulia" minlength="3"
+                  <input class="inputIcon" type="text" name="modelo" id="inputModel" placeholder="Modelo" minlength="3"
                     maxlength="50" required>
                 </div>
               </div>
@@ -132,8 +135,8 @@
               <div class="input-group">
                 <label for="inputEngine">Motor*</label>
                 <div class="inputIconForm">
-                  <i class="fa-solid fa-user"></i>
-                  <input class="inputIcon" type="text" name="motor" id="inputEngine" placeholder="Giulia" minlength="5"
+                  <i class="fa-solid fa-car"></i>
+                  <input class="inputIcon" type="text" name="motor" id="inputEngine" placeholder="2.5 220CV" minlength="5"
                     maxlength="50" required>
                 </div>
               </div>
@@ -142,13 +145,13 @@
                 <div class="inputIconForm">
                   <i class="fa-solid fa-swatchbook"></i>
                   <select class="inputIcon" name="tipo" id="selectType">
-                    <option value="Deportivo">Deportivo</option>
-                    <option value="Convertible">Convertible</option>
-                    <option value="Sedan">Sedan</option>
-                    <option value="Eléctrico">Eléctrico</option>
-                    <option value="Supercar">Supercar</option>
-                    <option value="SUV">SUV</option>
-                    <option value="Ultra Luxury">Ultra Luxury</option>
+                    <option value="0">Deportivo</option>
+                    <option value="1">Convertible</option>
+                    <option value="2">Sedan</option>
+                    <option value="3">Eléctrico</option>
+                    <option value="4">Supercar</option>
+                    <option value="5">SUV</option>
+                    <option value="6">Ultra Luxury</option>
                   </select>
                 </div>
               </div>
@@ -172,6 +175,7 @@
                   <select class="inputIcon" name="combustible" id="selectFuel">
                     <option value="Gasolina">Gasolina</option>
                     <option value="Diesel">Diesel</option>
+                    <option value="Eléctrico">Eléctrico</option>
                   </select>
                 </div>
               </div>
@@ -179,13 +183,34 @@
 
             <div class="flex-row">
               <div class="input-group">
-                <label for="inputSeats">Asientos*</label>
+                <label for="inputVelocidad">Velocidad Max.*</label>
                 <div class="inputIconForm">
-                  <i class="fa-solid fa-person"></i>
-                  <input class="inputIcon" type="number" name="asientos" id="inputSeats" min="1" max="5" value="2"
+                  <i class="fa-solid fa-gauge-high"></i>
+                  <input class="inputIcon" type="number" name="velocidadMax" id="inputVelocidad" min="100" max="500" placeholder="100"
                     required>
                 </div>
               </div>
+
+              <div class="input-group">
+                <label for="inputHP">HP*</label>
+                <div class="inputIconForm">
+                  <i class="fa-solid fa-horse"></i>
+                  <input class="inputIcon" type="number" name="horsepowerHP" id="inputHP" min="100" max="1500" placeholder="200"
+                    required>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="input060MPH">0 - 60 MPH*</label>
+                <div class="inputIconForm">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <input class="inputIcon" type="number" name="de0a60MPH" id="input060MPH" step="0.1" min="0.0" max="10.0" placeholder="0.0"
+                    required>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex-row">
               <div class="input-group">
                 <label for="inputReleaseYear">Año*</label>
                 <div class="inputIconForm">
@@ -193,14 +218,38 @@
                   <input class="inputIcon" type="date" name="anio" id="inputReleaseYear" required>
                 </div>
               </div>
+              <div class="input-group">
+                <label for="inputColor">Color*</label>
+                <div class="inputIconForm">
+                  <i class="fa-solid fa-palette"></i>
+                  <input class="inputIcon" type="color" value="#ffffff" name="color" id="inputColor" required>
+                </div>
+              </div>
+
             </div>
 
             <div class="flex-row">
               <div class="input-group">
+                <label for="inputSeats">Asientos*</label>
+                <div class="inputIconForm">
+                  <i class="fa-solid fa-person"></i>
+                  <input class="inputIcon" type="number" name="asientos" id="inputSeats" min="1" max="5" placeholder="2"
+                    required>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="inputRatingCount">Calificación*</label>
+                <div class="inputIconForm">
+                  <i class="fa-solid fa-star"></i>
+                  <input class="inputIcon" type="number" name="ratingCount" id="inputRatingCount" step="0.01" min="0" max="5" placeholder="2"
+                    required>
+                </div>
+              </div>
+              <div class="input-group">
                 <label for="inputPrice24h">Precio/24h ($)*</label>
                 <div class="inputIconForm">
                   <i class="fa-solid fa-dollar-sign"></i>
-                  <input class="inputIcon" type="number" name="precio_24h" id="inputPrice24h" min="1" required>
+                  <input class="inputIcon" type="number" name="precio_24h" id="inputPrice24h" min="1" placeholder="850" required>
                 </div>
               </div>
             </div>
@@ -210,7 +259,7 @@
               <div class="inputIconForm">
                 <i class="fa-solid fa-image"></i>
                 <input class="inputIcon" id="inputCarImg" type="text" name="autoImg"
-                  value="/assets/Cars/Porsche/porsche-718-cayman-gts-4.webp" required>
+                  value="/assets/Cars/Porsche/Porsche-718-Cayman-GT4-RS.png" required>
               </div>
             </div>
 
@@ -221,6 +270,10 @@
                 <textarea id="inputDescription" class="inputIcon" name="descripcion" rows="10" cols="50"
                   placeholder="Escribe algo aquí..."></textarea>
               </div>
+            </div>
+
+            <div class="flex-row">
+              
             </div>
 
             <div class="input-group">
@@ -275,6 +328,14 @@
     </div>
   </div>
 
+  <footer class="main-footer">
+    <small class="footer-copyright-ligth">
+      <i class="fa-regular fa-copyright"></i> My Company Ltd. <span id="year"></span>, Todos los derechos
+      reservados.</span>
+    </small>
+  </footer>
+
+  <script src="/js/main.js"></script>
   <script src="/js/header.js" ></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="/js/formatDate.js"></script>

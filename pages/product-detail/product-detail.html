@@ -51,7 +51,7 @@
 
     <div class="user-menu">
       <ul id="header-user" class="user-list">
-        <li class="switch-user-item">
+        <li class="display-switch switch-user-item">
           <button class="switch" id="switch">
             <span>
               <i class="fa-solid fa-sun"></i>
@@ -61,12 +61,12 @@
             </span>
           </button>
         </li>
-        <li class="user-item">
+        <li class="display-search user-item">
           <a class="user-link" href="/pages/login/login.html" title='Buscar modelo'>
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
         </li>
-        <li class="user-item">
+        <li class="display-info user-item">
           <a class="user-link" href="/pages/login/login.html" title='información'>
             <i class="fa-solid fa-circle-info"></i>
           </a>
@@ -75,56 +75,9 @@
     </div>
   </header>
 
-  <main class="main-container">
+  <main id="modelCar-detail" class="main-container">
 
-    <div class="container-wallpaper">
- 
-      <header class="detail-modelCars-header">
-        <div class="detail-modelCars-brand-container">
-          <img class="detail-modelCars-logo" src="/assets/Brands/isotipo-Ferrari.png" alt="Logo Ferrari">
-          <div class="detail-modelCars-brand">
-            <h2 class="detail-modelCars-make">Porsche</h2>
-            <p class="detail-modelCars-model">911 Turbo Cabriolet</p>
-          </div>
-        </div>
-      </header>
-
-      <p class="modelCar-text-background">Porsche</p>
-
-      <img class="modelCar-img-body" src="/assets/Cars/Porsche/porsche-718-cayman-style-edition.webp" alt="">
-
-      <section class="info-modelCar-footer">
-        <div class="info-modelCar">
-          <i class="fa-solid fa-car"></i>
-          <h4>Modelo</h4>
-          <p>911 Turbo Cabriolet</p>
-        </div>
-        <div class="info-modelCar">
-          <i class="fa-solid fa-user"></i>
-          <h4>Asientos</h4>
-          <p>245km/h</p>
-        </div>
-        <div class="info-modelCar">
-          <i class="fa-solid fa-retweet"></i>
-          <h4>Transmision</h4>
-          <p>245km/h</p>
-        </div>
-        <div class="info-modelCar">
-          <i class="fa-solid fa-droplet"></i>
-          <h4>Combustible</h4>
-          <p>789</p>
-        </div>
-        <div class="info-modelCar">
-          <i class="fa-solid fa-dollar-sign"></i>
-          <h4>Precio/24h</h4>
-          <p>789</p>
-        </div>
-        <div class="info-modelCar">
-          <a class="reservar-btn" href="/index.html">Reservar</a>
-        </div>
-      </section>
-      
-    </div>
+    <!-- Detalle rederizado en javascript (product-detail.js) -->
 
   </main>
 
@@ -223,15 +176,9 @@
 
   </footer>
 
-
-  <div class="whatsapp-container">
-    <a href="https://crear.wa.link/" target="_blank">
-      <img class="whatsapp-img" src="/assets/WhatsApp-logo.png" alt="whatsapp logo" />
-    </a>
-  </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="/js/formatDate.js" ></script>
   <script src="/js/header.js"></script>
-
+  <script src="/js/product-detail.js"></script>
 </body>
 </html>

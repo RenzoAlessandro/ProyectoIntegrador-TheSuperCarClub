@@ -50,7 +50,7 @@
 
     <div class="user-menu">
       <ul id="header-user" class="user-list">
-        <li class="switch-user-item">
+        <li class="display-switch switch-user-item">
           <button class="switch" id="switch">
             <span>
               <i class="fa-solid fa-sun"></i>
@@ -60,12 +60,12 @@
             </span>
           </button>
         </li>
-        <li class="user-item">
+        <li class="display-search user-item">
           <a class="user-link" href="/pages/login/login.html" title='Buscar modelo'>
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
         </li>
-        <li class="user-item">
+        <li class="display-info user-item">
           <a class="user-link" href="/pages/login/login.html" title='información'>
             <i class="fa-solid fa-circle-info"></i>
           </a>
@@ -79,46 +79,50 @@
     <div class="section-contact">
       <div class="contact-form-container">
         <div class="contact-wrapper">
-          <h1 class="title-form contact-title">Contáctenos</h1>
-          <p class="message">¡A nuestro amigable equipo le encantaría saber de usted!</p>
           <form class="form contact-form">
+            <div class="box-contact-form">
 
-            <div class="flex-row">
+              <h1 class="title-form contact-title">Contáctenos</h1>
+              <p class="message">¡A nuestro amigable equipo le encantaría saber de usted!</p>
+  
+              <div class="flex-row">
+                <div class="input-group">
+                  <label for="firstname">Nombres</label>
+                  <input class="inputSimple" type="text" name="firstname" id="firstname" minlength="5" maxlength="80"
+                    required>
+                </div>
+  
+                <div class="input-group">
+                  <label for="lastname">Apellidos</label>
+                  <input class="inputSimple" type="text" name="lastname" id="lastname" minlength="5" maxlength="80"
+                    required>
+                </div>
+              </div>
+  
+              <div class="flex-row">
+                <div class="input-group">
+                  <label for="email">Correo Electrónico</label>
+                  <input class="inputSimple" type="email" name="email" id="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="5" maxlength="80" required>
+                </div>
+  
+                <div class="input-group">
+                  <label for="phone">Número de Teléfono</label>
+                  <input class="inputSimple" type="tel" name="phone" id="phone" pattern="[0-9]{9}$" minlength="5"
+                    maxlength="80" required>
+                </div>
+              </div>
+  
               <div class="input-group">
-                <label for="firstname">Nombres</label>
-                <input class="inputSimple" type="text" name="firstname" id="firstname" minlength="5" maxlength="80"
-                  required>
+                <label for="message">Mensaje</label>
+                <textarea class="textareaSimple" name="message" id="message" rows="4" minlength="10" maxlength="400"
+                  required></textarea>
+              </div>
+  
+              <div class="input-group">
+                <button class="buttonSimple" type="submit">Enviar</button>
               </div>
 
-              <div class="input-group">
-                <label for="lastname">Apellidos</label>
-                <input class="inputSimple" type="text" name="lastname" id="lastname" minlength="5" maxlength="80"
-                  required>
-              </div>
-            </div>
-
-            <div class="flex-row">
-              <div class="input-group">
-                <label for="email">Correo Electrónico</label>
-                <input class="inputSimple" type="email" name="email" id="email"
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="5" maxlength="80" required>
-              </div>
-
-              <div class="input-group">
-                <label for="phone">Número de Teléfono</label>
-                <input class="inputSimple" type="tel" name="phone" id="phone" pattern="[0-9]{9}$" minlength="5"
-                  maxlength="80" required>
-              </div>
-            </div>
-
-            <div class="input-group">
-              <label for="message">Mensaje</label>
-              <textarea class="textareaSimple" name="message" id="message" rows="4" minlength="10" maxlength="400"
-                required></textarea>
-            </div>
-
-            <div class="input-group">
-              <button class="buttonSimple" type="submit">Enviar</button>
             </div>
           </form>
         </div>
@@ -145,7 +149,7 @@
           <a href="#"><i class="fa-brands fa-linkedin"></i></a>
           <a href="#"><i class="fa-brands fa-facebook"></i></a>
           <a href="#"><i class="fa-brands fa-google"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </section>
 

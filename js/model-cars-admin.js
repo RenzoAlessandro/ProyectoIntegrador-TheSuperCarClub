@@ -1,6 +1,7 @@
 // *INFO: Obtenemos los datos del localstorage "MODELCARS"
 const modelCarsArray = JSON.parse(localStorage.getItem("modelCars")) || [];
 const brandsArray = JSON.parse(localStorage.getItem("brands")) || [];
+const typeCars = JSON.parse(localStorage.getItem("typeCars")) || [];
 
 // *INFO: Obtenemos el body de la tabla
 const tableBodyHTML = document.getElementById("table-body");
@@ -30,7 +31,7 @@ function printModelCars(listModelCars) {
                                         <img src="${car.marca.imagoTipo}" alt="${car.marca.marca} Avatar">
                                         </td>
                                         <td class="modelCar-model">${car.modelo}</td>
-                                        <td class="modelCar-type">${car.tipo}</td>
+                                        <td class="modelCar-type">${car.tipo.tipo}</td>
                                         <td class="modelCar-year">${formatDateOutput(car.anio)}</td>
                                         <td class="modelCar-engine">${car.motor}</td>
                                         <td class="modelCar-transmission">${car.transmision}</td>
@@ -150,12 +151,18 @@ modelCarsFormHTML.addEventListener("submit", (evt) => {
         anio: new Date(el.anio.value).getTime(),
         transmision: el.transmision.value, // Automático
         combustible: el.combustible.value, // Diesel
-        tipo: el.tipo.value, // Convertible, Sedan, Eléctrico, Supercar, SUV, Ultra Luxury
+        tipo: typeCars[el.tipo.value], // Convertible, Sedan, Eléctrico, Supercar, SUV, Ultra Luxury
         asientos: el.asientos.value,
         precio_24h: el.precio_24h.value,
         active: el.active.checked,
         autoImg: el.autoImg.value,
         descripcion: el.descripcion.value,
+
+        velocidadMax: el.velocidadMax.value,
+        horsepowerHP: el.horsepowerHP.value,
+        de0a60MPH: el.de0a60MPH.value,
+        ratingCount: el.ratingCount.value,
+        color: el.color.value,
     };
 
     // Tenemos que realizar dos acciones:
@@ -228,12 +235,17 @@ function editModelCar(idSearch){
     el.anio.value = formatDateInput(modelCarEdit.anio);
     el.transmision.value = modelCarEdit.transmision; // Automático
     el.combustible.value = modelCarEdit.combustible; // Diesel
-    el.tipo.value = modelCarEdit.tipo; // Convertible, Sedan, Eléctrico, Supercar, SUV, Ultra Luxury
+    el.tipo.value = (modelCarEdit.tipo.id - 1); // Convertible, Sedan, Eléctrico, Supercar, SUV, Ultra Luxury
     el.asientos.value = modelCarEdit.asientos;
     el.precio_24h.value = modelCarEdit.precio_24h;
     el.active.checked = modelCarEdit.active;
     el.autoImg.value = modelCarEdit.autoImg;
     el.descripcion.value = modelCarEdit.descripcion;
+    el.velocidadMax.value = modelCarEdit.velocidadMax;
+    el.horsepowerHP.value = modelCarEdit.horsepowerHP;
+    el.de0a60MPH.value = modelCarEdit.de0a60MPH;
+    el.ratingCount.value = modelCarEdit.ratingCount;
+    el.color.value = modelCarEdit.color;
 
     // Cambiamos el button a editar vehiculo
     subtitle.innerText = 'Editar un Vehículo';

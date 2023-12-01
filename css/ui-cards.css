@@ -85,11 +85,6 @@
     /* box-shadow: var(--box-shadow-1); */
     cursor: pointer;
     transition: all 300ms ease;
-
-    &:hover {
-        box-shadow: var(--box-shadow-2);
-        transform: scale(1.02);
-    }
 }
 
 .card-first-header {
@@ -101,13 +96,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: hsl(231, 100%, 96%); */
     
     .card-first-img {
-        height: 240px;
-        width: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: auto;
         object-fit: cover;
         pointer-events: none;
-        transform: translateY(40px);
+        transition: all 300ms ease;
     }
     .card-first-info {
         position: absolute;
@@ -128,7 +129,7 @@
         .card-first-model {
             width: 100%;
             overflow: hidden;
-            color: var(--text-color);
+            color: var(--text-color-black);
         }
     }
 }
@@ -143,6 +144,7 @@
         display: flex;
         flex-direction: row;
         gap: .6rem;
+        color: var(--text-color-black);
 
         .card-first-seats,
         .card-first-transmission,
@@ -154,14 +156,13 @@
             align-items: center;
             font-size: smaller;
             font-weight: 300;
-            color: #858585;
         }
     }
     .card-first-price {
         display: flex;
         flex-direction: row;
         align-items: center;
-        color: var(--text-color);
+        color: var(--text-color-black);
 
         .text-price {
             font-size: 15px;
@@ -178,6 +179,17 @@
     width: 100%;
     height: 1px;
     background-color: #dadada;
+}
+
+.card-cars-first:hover {
+    box-shadow: var(--box-shadow-2);
+    transform: scale(1.02) rotate(-1deg);
+
+    /* .card-first-header {
+        .card-first-img {
+            transform: scale(1.05) rotate(1deg);
+        }
+    } */
 }
 /*============================================================
 ========================== CAR 1 END =========================
@@ -205,17 +217,12 @@
     border-radius: 16px;
     /* box-shadow: var(--box-shadow-1); */
     transition: all 300ms ease;
-
-    &:hover {
-        box-shadow: var(--box-shadow-2);
-        transform: scale(1.02);
-    }
 }
 
 .card-cars-second-header {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 200px;
     overflow: hidden;
 
     display: flex;
@@ -223,10 +230,16 @@
     align-items: flex-end;
     
     .card-second-img {
-        height: 240px;
-        width: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
         pointer-events: none;
-        transform: translateY(40px);
+        transition: all 300ms ease;
     }
     .card-second-info {
         position: absolute;
@@ -344,6 +357,17 @@
         background-color: var(--button-color);
         font-family: var(--body-font);
         color: var(--text-color-reverse);
+    }
+}
+
+.card-cars-second:hover {
+    box-shadow: var(--box-shadow-2);
+    /* transform: scale(1.02); */
+    .card-cars-second-header{
+        .card-second-img{
+            transform: scale(1.07);
+
+        }
     }
 }
 /*============================================================

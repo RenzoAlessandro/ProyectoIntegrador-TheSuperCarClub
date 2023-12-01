@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: .5rem;
+            gap: 1rem;
 
             .detail-modelCars-logo {
                 width: 150px;
@@ -25,7 +25,7 @@
             .detail-modelCars-make{
                 width: 100%;
                 overflow: hidden;
-                font-size: 4rem;
+                font-size: 1vw;
                 font-family: var(--title-font);
                 text-transform: uppercase;
                 letter-spacing: .5rem;
@@ -34,7 +34,7 @@
             .detail-modelCars-model {
                 width: 100%;
                 overflow: hidden;
-                font-size: 3rem;
+                font-size: 2vw;
                 font-family: var(--body-font);
                 font-weight: 600;
                 color: #2F3542;
@@ -43,9 +43,11 @@
     }
 
     .modelCar-text-background {
+        width: 100%;
+        text-align: center;
         font-family: 'Poppins', sans-serif;
         position: absolute;
-        font-size: 20rem;
+        font-size: 15vw;
         font-weight: 700;
         top: 25%;
         left: 50%;
@@ -60,8 +62,8 @@
         right: 0;
         bottom: 0;
         margin: auto;
-        width: auto;
-        /* height: 80%; */
+        width: 80%;
+        height: auto;
         pointer-events: none;
     }
 
@@ -82,19 +84,21 @@
         }
 
         .reservar-btn{
-            width: auto;
-            height: auto;
-            font-size: 12px;
+            font-size: 14px;
             text-decoration: none;
             border: none;
             font-weight: 500;
-            border-radius: 10px;
             cursor: pointer;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             background-color: transparent;
             font-family: var(--body-font);
             color: var(--text-color);
+
+            padding: 1.25rem .8rem;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
         }
     }
     .info-modelCar-footer .info-modelCar {
@@ -102,6 +106,8 @@
         text-align: center;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     
         .fa-solid {
             font-size: 1rem;
