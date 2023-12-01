@@ -76,7 +76,7 @@ function hexToRGB(hex){
 }
 
 function getPastelHigthColor(hex){
-  
+  hex = hextoString();
   hue = hexToRGB(hex);
   // Calculate lightness
   l = 96;
@@ -86,6 +86,7 @@ function getPastelHigthColor(hex){
 }
 
 function getPastelStrongColor(hex){
+  hex = hextoString();
   hue = hexToRGB(hex);
   // Calculate lightness
   l = 90;
