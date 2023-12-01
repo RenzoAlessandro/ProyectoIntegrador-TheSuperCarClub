@@ -76,7 +76,7 @@ function hexToRGB(hex){
 }
 
 function getPastelHigthColor(hex){
-  hex = hextoString();
+  hex = hex.toString();
   hue = hexToRGB(hex);
   // Calculate lightness
   l = 96;
@@ -86,7 +86,7 @@ function getPastelHigthColor(hex){
 }
 
 function getPastelStrongColor(hex){
-  hex = hextoString();
+  hex = hex.toString();
   hue = hexToRGB(hex);
   // Calculate lightness
   l = 90;
@@ -103,7 +103,6 @@ function goProductDetail(id){
 function printFirstCard(listModelCars, containerHTML){
   containerHTML.innerHTML = '';
   listModelCars.forEach(car => {
-    console.log(car.color),
     containerHTML.innerHTML += `
                                 <a onclick=goProductDetail(${car.id})>
                                   <article class="card-cars-first">
