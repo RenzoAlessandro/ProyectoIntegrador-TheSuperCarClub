@@ -313,10 +313,12 @@
         & h4 {
             font-size: 24px;
             font-weight: 300;
+            color: var(--text-color)
         }
 
         & p {
             font-size: medium;
+            color: var(--text-color)
         }
     }
 }

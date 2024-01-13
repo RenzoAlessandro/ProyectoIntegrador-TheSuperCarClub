@@ -62,3 +62,7 @@
     position: sticky;
     top: 113px
 }
+
+.text-basic-color {
+    color: var(--text-color);
+}

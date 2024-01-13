@@ -415,6 +415,9 @@
             color: #858585;
             font-size: small;
         }
+        .card-testimonial-autor{
+            color: var(--text-color);
+        }
     }
 }
 /*============================================================

@@ -49,7 +49,7 @@
 /*************** Dark Mode ***************/
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    .dark {
         --header-bg-color: #03131a;
         --body-bg-color: rgb(33,36,46);
         --footer-bg-color: #03131a;
@@ -79,11 +79,11 @@
         --body-color: #dddee0;
         --theme-bg-color: #212835;
         --main-color: #fefffd;
-    }
 
-    .nav-logo {
-        -webkit-filter: invert(100%); /* Safari/Chrome */
-        filter: invert(100%);
+        .nav-logo {
+            -webkit-filter: invert(100%); /* Safari/Chrome */
+            filter: invert(100%);
+        }
     }
 }
 
